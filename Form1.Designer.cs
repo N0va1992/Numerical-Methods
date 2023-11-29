@@ -34,6 +34,7 @@
             this.aproksymacjeBnt = new System.Windows.Forms.Button();
             this.calkowanieBtn = new System.Windows.Forms.Button();
             this.rozniczkowanieBtn = new System.Windows.Forms.Button();
+            this.languageBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tytuł
@@ -50,7 +51,7 @@
             // 
             this.przyblizeniaBtn.Location = new System.Drawing.Point(13, 67);
             this.przyblizeniaBtn.Name = "przyblizeniaBtn";
-            this.przyblizeniaBtn.Size = new System.Drawing.Size(94, 23);
+            this.przyblizeniaBtn.Size = new System.Drawing.Size(274, 23);
             this.przyblizeniaBtn.TabIndex = 1;
             this.przyblizeniaBtn.Text = "Przybliżenia";
             this.przyblizeniaBtn.UseVisualStyleBackColor = true;
@@ -59,7 +60,7 @@
             // 
             this.interpolacjeBtn.Location = new System.Drawing.Point(13, 97);
             this.interpolacjeBtn.Name = "interpolacjeBtn";
-            this.interpolacjeBtn.Size = new System.Drawing.Size(94, 23);
+            this.interpolacjeBtn.Size = new System.Drawing.Size(274, 23);
             this.interpolacjeBtn.TabIndex = 2;
             this.interpolacjeBtn.Text = "Interpolacje";
             this.interpolacjeBtn.UseVisualStyleBackColor = true;
@@ -68,7 +69,7 @@
             // 
             this.aproksymacjeBnt.Location = new System.Drawing.Point(13, 127);
             this.aproksymacjeBnt.Name = "aproksymacjeBnt";
-            this.aproksymacjeBnt.Size = new System.Drawing.Size(94, 23);
+            this.aproksymacjeBnt.Size = new System.Drawing.Size(274, 23);
             this.aproksymacjeBnt.TabIndex = 3;
             this.aproksymacjeBnt.Text = "Aproksymacje";
             this.aproksymacjeBnt.UseVisualStyleBackColor = true;
@@ -77,26 +78,37 @@
             // 
             this.calkowanieBtn.Location = new System.Drawing.Point(13, 157);
             this.calkowanieBtn.Name = "calkowanieBtn";
-            this.calkowanieBtn.Size = new System.Drawing.Size(94, 23);
+            this.calkowanieBtn.Size = new System.Drawing.Size(274, 23);
             this.calkowanieBtn.TabIndex = 4;
             this.calkowanieBtn.Text = "Całkowanie";
             this.calkowanieBtn.UseVisualStyleBackColor = true;
             // 
             // rozniczkowanieBtn
             // 
-            this.rozniczkowanieBtn.Location = new System.Drawing.Point(13, 187);
+            this.rozniczkowanieBtn.Location = new System.Drawing.Point(12, 186);
             this.rozniczkowanieBtn.Name = "rozniczkowanieBtn";
-            this.rozniczkowanieBtn.Size = new System.Drawing.Size(94, 23);
+            this.rozniczkowanieBtn.Size = new System.Drawing.Size(275, 23);
             this.rozniczkowanieBtn.TabIndex = 5;
             this.rozniczkowanieBtn.Text = "Różniczkowanie";
             this.rozniczkowanieBtn.UseVisualStyleBackColor = true;
+            // 
+            // languageBtn
+            // 
+            this.languageBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.languageBtn.Location = new System.Drawing.Point(109, 224);
+            this.languageBtn.Name = "languageBtn";
+            this.languageBtn.Size = new System.Drawing.Size(75, 23);
+            this.languageBtn.TabIndex = 6;
+            this.languageBtn.Text = "Zmień język";
+            this.languageBtn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(299, 236);
+            this.ClientSize = new System.Drawing.Size(299, 259);
+            this.Controls.Add(this.languageBtn);
             this.Controls.Add(this.rozniczkowanieBtn);
             this.Controls.Add(this.calkowanieBtn);
             this.Controls.Add(this.aproksymacjeBnt);
@@ -117,6 +129,7 @@
         private System.Windows.Forms.Button aproksymacjeBnt;
         private System.Windows.Forms.Button calkowanieBtn;
         private System.Windows.Forms.Button rozniczkowanieBtn;
+        private System.Windows.Forms.Button languageBtn;
     }
 }
 

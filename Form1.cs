@@ -15,7 +15,7 @@ namespace metodyNumeryczne
         public Form1()
         {
             InitializeComponent();
-            tytuł.Text = "Wstep do Metod Numerycznych" +
+            title.Text = "Wstep do Metod Numerycznych" +
                 "\n Aplikacja komputerowa";
         }
     }

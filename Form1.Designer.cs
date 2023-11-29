@@ -28,69 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tytuł = new System.Windows.Forms.Label();
-            this.przyblizeniaBtn = new System.Windows.Forms.Button();
-            this.interpolacjeBtn = new System.Windows.Forms.Button();
-            this.aproksymacjeBnt = new System.Windows.Forms.Button();
-            this.calkowanieBtn = new System.Windows.Forms.Button();
-            this.rozniczkowanieBtn = new System.Windows.Forms.Button();
+            this.title = new System.Windows.Forms.Label();
+            this.approximationsBtn = new System.Windows.Forms.Button();
+            this.interpolationsBtn = new System.Windows.Forms.Button();
+            this.approxfuncBnt = new System.Windows.Forms.Button();
+            this.integrationsBtn = new System.Windows.Forms.Button();
+            this.differentiationBtn = new System.Windows.Forms.Button();
             this.languageBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // tytuł
+            // title
             // 
-            this.tytuł.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tytuł.Location = new System.Drawing.Point(0, 0);
-            this.tytuł.Name = "tytuł";
-            this.tytuł.Size = new System.Drawing.Size(299, 37);
-            this.tytuł.TabIndex = 0;
-            this.tytuł.Text = "tytuł";
-            this.tytuł.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.title.Location = new System.Drawing.Point(0, 0);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(299, 37);
+            this.title.TabIndex = 0;
+            this.title.Text = "tytuł";
+            this.title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // przyblizeniaBtn
+            // approximationsBtn
             // 
-            this.przyblizeniaBtn.Location = new System.Drawing.Point(13, 67);
-            this.przyblizeniaBtn.Name = "przyblizeniaBtn";
-            this.przyblizeniaBtn.Size = new System.Drawing.Size(274, 23);
-            this.przyblizeniaBtn.TabIndex = 1;
-            this.przyblizeniaBtn.Text = "Przybliżenia";
-            this.przyblizeniaBtn.UseVisualStyleBackColor = true;
+            this.approximationsBtn.Location = new System.Drawing.Point(13, 67);
+            this.approximationsBtn.Name = "approximationsBtn";
+            this.approximationsBtn.Size = new System.Drawing.Size(274, 23);
+            this.approximationsBtn.TabIndex = 1;
+            this.approximationsBtn.Text = "Przybliżenia";
+            this.approximationsBtn.UseVisualStyleBackColor = true;
             // 
-            // interpolacjeBtn
+            // interpolationsBtn
             // 
-            this.interpolacjeBtn.Location = new System.Drawing.Point(13, 97);
-            this.interpolacjeBtn.Name = "interpolacjeBtn";
-            this.interpolacjeBtn.Size = new System.Drawing.Size(274, 23);
-            this.interpolacjeBtn.TabIndex = 2;
-            this.interpolacjeBtn.Text = "Interpolacje";
-            this.interpolacjeBtn.UseVisualStyleBackColor = true;
+            this.interpolationsBtn.Location = new System.Drawing.Point(13, 97);
+            this.interpolationsBtn.Name = "interpolationsBtn";
+            this.interpolationsBtn.Size = new System.Drawing.Size(274, 23);
+            this.interpolationsBtn.TabIndex = 2;
+            this.interpolationsBtn.Text = "Interpolacje";
+            this.interpolationsBtn.UseVisualStyleBackColor = true;
             // 
-            // aproksymacjeBnt
+            // approxfuncBnt
             // 
-            this.aproksymacjeBnt.Location = new System.Drawing.Point(13, 127);
-            this.aproksymacjeBnt.Name = "aproksymacjeBnt";
-            this.aproksymacjeBnt.Size = new System.Drawing.Size(274, 23);
-            this.aproksymacjeBnt.TabIndex = 3;
-            this.aproksymacjeBnt.Text = "Aproksymacje";
-            this.aproksymacjeBnt.UseVisualStyleBackColor = true;
+            this.approxfuncBnt.Location = new System.Drawing.Point(13, 127);
+            this.approxfuncBnt.Name = "approxfuncBnt";
+            this.approxfuncBnt.Size = new System.Drawing.Size(274, 23);
+            this.approxfuncBnt.TabIndex = 3;
+            this.approxfuncBnt.Text = "Aproksymacje";
+            this.approxfuncBnt.UseVisualStyleBackColor = true;
             // 
-            // calkowanieBtn
+            // integrationsBtn
             // 
-            this.calkowanieBtn.Location = new System.Drawing.Point(13, 157);
-            this.calkowanieBtn.Name = "calkowanieBtn";
-            this.calkowanieBtn.Size = new System.Drawing.Size(274, 23);
-            this.calkowanieBtn.TabIndex = 4;
-            this.calkowanieBtn.Text = "Całkowanie";
-            this.calkowanieBtn.UseVisualStyleBackColor = true;
+            this.integrationsBtn.Location = new System.Drawing.Point(13, 157);
+            this.integrationsBtn.Name = "integrationsBtn";
+            this.integrationsBtn.Size = new System.Drawing.Size(274, 23);
+            this.integrationsBtn.TabIndex = 4;
+            this.integrationsBtn.Text = "Całkowanie";
+            this.integrationsBtn.UseVisualStyleBackColor = true;
             // 
-            // rozniczkowanieBtn
+            // differentiationBtn
             // 
-            this.rozniczkowanieBtn.Location = new System.Drawing.Point(12, 186);
-            this.rozniczkowanieBtn.Name = "rozniczkowanieBtn";
-            this.rozniczkowanieBtn.Size = new System.Drawing.Size(275, 23);
-            this.rozniczkowanieBtn.TabIndex = 5;
-            this.rozniczkowanieBtn.Text = "Różniczkowanie";
-            this.rozniczkowanieBtn.UseVisualStyleBackColor = true;
+            this.differentiationBtn.Location = new System.Drawing.Point(12, 186);
+            this.differentiationBtn.Name = "differentiationBtn";
+            this.differentiationBtn.Size = new System.Drawing.Size(275, 23);
+            this.differentiationBtn.TabIndex = 5;
+            this.differentiationBtn.Text = "Różniczkowanie";
+            this.differentiationBtn.UseVisualStyleBackColor = true;
             // 
             // languageBtn
             // 
@@ -109,12 +109,12 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(299, 259);
             this.Controls.Add(this.languageBtn);
-            this.Controls.Add(this.rozniczkowanieBtn);
-            this.Controls.Add(this.calkowanieBtn);
-            this.Controls.Add(this.aproksymacjeBnt);
-            this.Controls.Add(this.interpolacjeBtn);
-            this.Controls.Add(this.przyblizeniaBtn);
-            this.Controls.Add(this.tytuł);
+            this.Controls.Add(this.differentiationBtn);
+            this.Controls.Add(this.integrationsBtn);
+            this.Controls.Add(this.approxfuncBnt);
+            this.Controls.Add(this.interpolationsBtn);
+            this.Controls.Add(this.approximationsBtn);
+            this.Controls.Add(this.title);
             this.Name = "Form1";
             this.Text = "WdMN App";
             this.ResumeLayout(false);
@@ -123,12 +123,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label tytuł;
-        private System.Windows.Forms.Button przyblizeniaBtn;
-        private System.Windows.Forms.Button interpolacjeBtn;
-        private System.Windows.Forms.Button aproksymacjeBnt;
-        private System.Windows.Forms.Button calkowanieBtn;
-        private System.Windows.Forms.Button rozniczkowanieBtn;
+        private System.Windows.Forms.Label title;
+        private System.Windows.Forms.Button approximationsBtn;
+        private System.Windows.Forms.Button interpolationsBtn;
+        private System.Windows.Forms.Button approxfuncBnt;
+        private System.Windows.Forms.Button integrationsBtn;
+        private System.Windows.Forms.Button differentiationBtn;
         private System.Windows.Forms.Button languageBtn;
     }
 }

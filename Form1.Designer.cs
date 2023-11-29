@@ -34,7 +34,7 @@
             this.approxfuncBnt = new System.Windows.Forms.Button();
             this.integrationsBtn = new System.Windows.Forms.Button();
             this.differentiationBtn = new System.Windows.Forms.Button();
-            this.languageBtn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // title
@@ -92,15 +92,17 @@
             this.differentiationBtn.Text = "Różniczkowanie";
             this.differentiationBtn.UseVisualStyleBackColor = true;
             // 
-            // languageBtn
+            // comboBox1
             // 
-            this.languageBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.languageBtn.Location = new System.Drawing.Point(109, 224);
-            this.languageBtn.Name = "languageBtn";
-            this.languageBtn.Size = new System.Drawing.Size(75, 23);
-            this.languageBtn.TabIndex = 6;
-            this.languageBtn.Text = "Zmień język";
-            this.languageBtn.UseVisualStyleBackColor = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "en-US",
+            "pl-PL"});
+            this.comboBox1.Location = new System.Drawing.Point(85, 226);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -108,7 +110,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(299, 259);
-            this.Controls.Add(this.languageBtn);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.differentiationBtn);
             this.Controls.Add(this.integrationsBtn);
             this.Controls.Add(this.approxfuncBnt);
@@ -129,7 +131,7 @@
         private System.Windows.Forms.Button approxfuncBnt;
         private System.Windows.Forms.Button integrationsBtn;
         private System.Windows.Forms.Button differentiationBtn;
-        private System.Windows.Forms.Button languageBtn;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

@@ -11,16 +11,31 @@ namespace numericalMethods.Localization
 {
     public static class LanguageManager
     {
-        private static readonly ResourceManager _resourceManager;
+        private static ResourceManager _resourceManager;
+        private static string _currentCulture = "pl-PL"; // Default to English
 
         static LanguageManager()
         {
             _resourceManager = new ResourceManager("numericalMethods.Resource", typeof(LanguageManager).Assembly);
         }
 
-        public static void ChangeLanguage(string culture)
+        public static void ToggleLanguage()
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
+            // Toggle between English and Polish
+            _currentCulture = (_currentCulture == "pl-PL") ? "en-US" : "pl-PL";
+
+            // Load the resource file for the current culture
+            try
+            {
+                _resourceManager = new ResourceManager($"numericalMethods.Resource", typeof(LanguageManager).Assembly);
+            }
+            catch (MissingManifestResourceException)
+            {
+                // Handle exception if the specified culture is not available
+            }
+
+            // Set the current UI culture
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(_currentCulture);
         }
 
         public static string GetLocalizedString(string key)

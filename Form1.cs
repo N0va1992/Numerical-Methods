@@ -16,20 +16,18 @@ namespace metodyNumeryczne
         public Form1()
         {
             InitializeComponent();
-            title.Text = "Introduction to Numerical Methods" +
-                "\n Computer Application";
+            title.Text = "Wstep do Metod Numerycznych";
         }
 
         private void languageBtn_Click(object sender, EventArgs e)
         {
-            // Change language to English (en-US)
-            LanguageManager.ChangeLanguage("en-US");
+            // Toggle between English and Polish
+            LanguageManager.ToggleLanguage();
 
             // Update form controls with localized strings
             UpdateLocalizedStrings();
         }
 
-        // Add this method to update localized strings on the form
         private void UpdateLocalizedStrings()
         {
             approximationsBtn.Text = LanguageManager.GetLocalizedString("approximationsBtn");

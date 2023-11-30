@@ -128,7 +128,6 @@
   </data>
   <data name="formTitle" xml:space="preserve">
     <value>Wstęp do metod numerycznych</value>
-    <comment>Aplikacja komputerowa</comment>
   </data>
   <data name="integrationsBtn" xml:space="preserve">
     <value>Całkowanie</value>

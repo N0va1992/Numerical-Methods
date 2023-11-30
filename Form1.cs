@@ -1,4 +1,5 @@
-﻿using numericalMethods.Localization;
+﻿using numericalMethods;
+using numericalMethods.Localization;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,33 @@ namespace metodyNumeryczne
 {
     public partial class Form1 : Form
     {
+        private ApproximationsViewControl approximationsView;
+        private InterpolationsViewControl interpolationsView;
+        private Form1 originalForm;
+        private Control currentView;
+
         public Form1()
         {
             InitializeComponent();
-            title.Text = "Wstep do Metod Numerycznych";
+            title.Text = "Wstęp do Metod Numerycznych";
+
+            originalForm = this;
+            approximationsView = new ApproximationsViewControl();
+            interpolationsView = new InterpolationsViewControl();
+
+            approximationsView.BackButtonClicked += UserControl_BackButtonClicked;
+        }
+
+        private void approximationsBtn_Click(object sender, EventArgs e)
+        {
+            // Pokaż widok przybliżeń
+            ShowView(approximationsView);
+        }
+
+        private void interpolationsBtn_Click(object sender, EventArgs e)
+        {
+            // Pokaż widok interpolacji
+            ShowView(interpolationsView);
         }
 
         private void languageBtn_Click(object sender, EventArgs e)
@@ -38,5 +62,47 @@ namespace metodyNumeryczne
             languageBtn.Text = LanguageManager.GetLocalizedString("languageBtn");
             title.Text = LanguageManager.GetLocalizedString("formTitle");
         }
+
+        private void ShowView(Control view)
+        {
+            // Ukryj bieżący widok
+            if (currentView != null)
+            {
+                currentView.Hide();
+            }
+
+            // Pokaż nowy widok
+            view.Dock = DockStyle.Fill;
+            view.Show();
+
+            // Ustaw nowy widok jako bieżący
+            currentView = view;
+
+            // Zaktualizuj lokalizację po zmianie widoku
+            UpdateLocalizedStrings();
+        }
+
+        private Form GetMainForm()
+        {
+            return Application.OpenForms.OfType<Form>().FirstOrDefault(f => f is Form1);
+        }
+
+        private void UserControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            // Powrót do głównego menu
+            Form mainForm = GetMainForm();
+            if (mainForm != null)
+            {
+                if (currentView != null)
+                {
+                    currentView.Dispose(); // Zwolnij zasoby kontrolki (opcjonalne)
+                }
+                ShowView(mainForm);
+            }
+        }
+
     }
 }
+
+
+//naprawić wyświetlanie kontrolek. być może będzie trzeba całe główne menu przenieść do formularza

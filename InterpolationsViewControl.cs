@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace metodyNumeryczne
+namespace numericalMethods
 {
-    public partial class Form2 : Form
+    public partial class InterpolationsViewControl : UserControl
     {
-        public Form2()
+        public InterpolationsViewControl()
         {
             InitializeComponent();
         }

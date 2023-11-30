@@ -55,6 +55,7 @@
             this.approximationsBtn.TabIndex = 1;
             this.approximationsBtn.Text = "Przybliżenia";
             this.approximationsBtn.UseVisualStyleBackColor = true;
+            this.approximationsBtn.Click += new System.EventHandler(this.approximationsBtn_Click);
             // 
             // interpolationsBtn
             // 
@@ -64,6 +65,7 @@
             this.interpolationsBtn.TabIndex = 2;
             this.interpolationsBtn.Text = "Interpolacje";
             this.interpolationsBtn.UseVisualStyleBackColor = true;
+            this.interpolationsBtn.Click += new System.EventHandler(this.interpolationsBtn_Click);
             // 
             // approxfuncBnt
             // 

@@ -1,5 +1,6 @@
 ﻿// MainMenuControl.cs
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using numericalMethods.Localization;
 
@@ -15,10 +16,13 @@ namespace metodyNumeryczne
         {
             InitializeComponent();
             UpdateLocalizedStrings();
+
+            languageBtn.Click += languageBtn_Click;
         }
 
-        private void UpdateLocalizedStrings()
+        public void UpdateLocalizedStrings()
         {
+            // Kod aktualizacji lokalizowanych ciągów
             approximationsBtn.Text = LanguageManager.GetLocalizedString("approximationsBtn");
             interpolationsBtn.Text = LanguageManager.GetLocalizedString("interpolationsBtn");
             approxfuncBnt.Text = LanguageManager.GetLocalizedString("approxfuncBnt");
@@ -30,14 +34,10 @@ namespace metodyNumeryczne
 
         private void languageBtn_Click(object sender, EventArgs e)
         {
-            // Przełącz język
-            LanguageManager.ToggleLanguage();
-
-            // Aktualizuj teksty po przełączeniu języka
-            UpdateLocalizedStrings();
-
-            // Wywołaj zdarzenie informujące o przełączeniu języka
+            Console.WriteLine("Language button clicked");
+            // Obsługa przycisku zmiany języka
             LanguageButtonClicked?.Invoke(this, EventArgs.Empty);
         }
+
     }
 }

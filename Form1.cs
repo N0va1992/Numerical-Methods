@@ -1,6 +1,7 @@
 ﻿// Form1.cs
 using System;
 using System.Windows.Forms;
+using numericalMethods.Localization;
 
 namespace metodyNumeryczne
 {
@@ -38,7 +39,10 @@ namespace metodyNumeryczne
         private void MainMenuControl_LanguageButtonClicked(object sender, EventArgs e)
         {
             // Obsługa przycisku Language
-            // Tu możesz wywołać kod związany z Language
+            // Tutaj dodaj kod do ponownego załadowania całego interfejsu użytkownika
+            // z nowymi tekstami w nowym języku.
+            LanguageManager.ToggleLanguage();
+            mainMenuControl.UpdateLocalizedStrings();
         }
     }
 }

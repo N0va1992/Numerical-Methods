@@ -71,6 +71,21 @@
     <Compile Include="MainMenuControl.Designer.cs">
       <DependentUpon>MainMenuControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApproxMenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApproxMenuControl.Designer.cs">
+      <DependentUpon>ApproxMenuControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskMenu11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskMenu11.Designer.cs">
+      <DependentUpon>TaskMenu11.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ApproxMenuControl.resx">
+      <DependentUpon>ApproxMenuControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +109,9 @@
     <EmbeddedResource Include="Resource.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskMenu11.resx">
+      <DependentUpon>TaskMenu11.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

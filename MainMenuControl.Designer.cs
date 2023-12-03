@@ -102,10 +102,12 @@
             this.approximationsBtn.TabIndex = 8;
             this.approximationsBtn.Text = "Przybliżenia";
             this.approximationsBtn.UseVisualStyleBackColor = true;
+            this.approximationsBtn.Click += new System.EventHandler(this.approximationsBtn_Click);
             // 
             // title
             // 
             this.title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.title.Location = new System.Drawing.Point(0, 0);
             this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title.Name = "title";

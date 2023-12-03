@@ -32,11 +32,12 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(399, 387);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.ClientSize = new System.Drawing.Size(299, 314);
+            this.MaximumSize = new System.Drawing.Size(315, 353);
+            this.MinimumSize = new System.Drawing.Size(315, 353);
             this.Name = "Form1";
             this.Text = "WdMN App";
             this.ResumeLayout(false);

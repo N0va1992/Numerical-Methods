@@ -39,5 +39,9 @@ namespace metodyNumeryczne
             LanguageButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
+        private void approximationsBtn_Click(object sender, EventArgs e)
+        {
+            ApproximationsButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

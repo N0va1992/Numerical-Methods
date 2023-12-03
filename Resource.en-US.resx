@@ -123,6 +123,12 @@
   <data name="approximationsBtn" xml:space="preserve">
     <value>Approximations</value>
   </data>
+  <data name="approxTitle" xml:space="preserve">
+    <value>Approximations</value>
+  </data>
+  <data name="backBtn11" xml:space="preserve">
+    <value>Back</value>
+  </data>
   <data name="differentiationBtn" xml:space="preserve">
     <value>Differentiation</value>
   </data>
@@ -138,5 +144,11 @@
   </data>
   <data name="languageBtn" xml:space="preserve">
     <value>Change language</value>
+  </data>
+  <data name="task11Btn" xml:space="preserve">
+    <value>Task 1</value>
+  </data>
+  <data name="task12Btn" xml:space="preserve">
+    <value>Task 2</value>
   </data>
 </root>

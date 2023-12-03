@@ -117,37 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="approxfuncBnt" xml:space="preserve">
-    <value>Aproksymacje</value>
-  </data>
-  <data name="approximationsBtn" xml:space="preserve">
-    <value>Przybliżenia</value>
-  </data>
-  <data name="approxTitle" xml:space="preserve">
-    <value>Przybiżenia</value>
-  </data>
-  <data name="backBtn11" xml:space="preserve">
-    <value>Powrót</value>
-  </data>
-  <data name="differentiationBtn" xml:space="preserve">
-    <value>Różniczkowanie</value>
-  </data>
-  <data name="formTitle" xml:space="preserve">
-    <value>Wstęp do metod numerycznych</value>
-  </data>
-  <data name="integrationsBtn" xml:space="preserve">
-    <value>Całkowanie</value>
-  </data>
-  <data name="interpolationsBtn" xml:space="preserve">
-    <value>Interpolacje</value>
-  </data>
-  <data name="languageBtn" xml:space="preserve">
-    <value>Zmień język</value>
-  </data>
-  <data name="task11Btn" xml:space="preserve">
-    <value>Zadanie 1</value>
-  </data>
-  <data name="task12Btn" xml:space="preserve">
-    <value>Zadanie 2</value>
-  </data>
 </root>

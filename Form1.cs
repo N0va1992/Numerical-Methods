@@ -11,6 +11,7 @@ namespace metodyNumeryczne
         private MainMenuControl mainMenuControl;
         private ApproxMenuControl approxMenuControl;
         private TaskMenu11 taskMenu11;
+        private TaskMenu12 taskMenu12;
 
         public Form1()
         {
@@ -61,7 +62,17 @@ namespace metodyNumeryczne
             ShowTask11Control();
         }
 
+        private void ApproxMenuControl_Task12ButtonClicked(object sender, EventArgs e)
+        {
+            ShowTask12Control();
+        }
+
         private void Task11Control_BackButtonClicked(object sender, EventArgs e) 
+        {
+            ShowApproxMenuContol();
+        }
+
+        private void Task12Control_BackButtonClicked(object sender, EventArgs e)
         {
             ShowApproxMenuContol();
         }
@@ -98,6 +109,7 @@ namespace metodyNumeryczne
             // Przypisanie Event Handlera do przycisku powrotu
             approxMenuControl.BackButtonClicked += ApproxMenuControl_BackButtonClicked;
             approxMenuControl.Task11ButtonClicked += ApproxMenuControl_Task11ButtonClicked;
+            approxMenuControl.Task12ButtonClicked += ApproxMenuControl_Task12ButtonClicked;
 
         }
 
@@ -111,6 +123,18 @@ namespace metodyNumeryczne
             Controls.Add(taskMenu11);
 
             taskMenu11.BackButtonClicked += Task11Control_BackButtonClicked;
+        }
+
+        private void ShowTask12Control()
+        {
+            taskMenu12 = new TaskMenu12();
+            taskMenu12.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+
+            Controls.Add(taskMenu12);
+
+            taskMenu12.BackButtonClicked += Task12Control_BackButtonClicked;
         }
     }
 }

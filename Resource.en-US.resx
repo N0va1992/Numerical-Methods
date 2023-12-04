@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="absError1" xml:space="preserve">
+    <value>Absolute error:</value>
+  </data>
   <data name="absoluteErrorLabel" xml:space="preserve">
     <value>Absolute error:</value>
   </data>
@@ -132,13 +135,16 @@
   <data name="approxTitle" xml:space="preserve">
     <value>Approximations</value>
   </data>
+  <data name="appValue1" xml:space="preserve">
+    <value>Approximate value:</value>
+  </data>
   <data name="backBtn11" xml:space="preserve">
     <value>Back</value>
   </data>
   <data name="backBtn111" xml:space="preserve">
     <value>Back</value>
   </data>
-  <data name="calculateBtn11" xml:space="preserve">
+  <data name="calculateBtn" xml:space="preserve">
     <value>Calculate</value>
   </data>
   <data name="differentiationBtn" xml:space="preserve">
@@ -163,6 +169,9 @@
   <data name="languageBtn" xml:space="preserve">
     <value>Change language</value>
   </data>
+  <data name="overestimationText" xml:space="preserve">
+    <value>Overstimination:</value>
+  </data>
   <data name="relativeErrorLabel" xml:space="preserve">
     <value>Relative error:</value>
   </data>
@@ -174,5 +183,13 @@
   </data>
   <data name="task12Btn" xml:space="preserve">
     <value>Task 2</value>
+  </data>
+  <data name="task12Task" xml:space="preserve">
+    <value>Write and run a computer application that finds the exact value of a number if we enter its approximate value and its absolute error for two cases:
+1. The number is underestimated.
+2. The number is overestimated.</value>
+  </data>
+  <data name="underestimationText" xml:space="preserve">
+    <value>Understimination: </value>
   </data>
 </root>

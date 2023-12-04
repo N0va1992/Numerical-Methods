@@ -55,7 +55,7 @@ namespace numericalMethods
             task11Task.Text = LanguageManager.GetLocalizedString("task11Task");
             exNumber.Text = LanguageManager.GetLocalizedString("exNumber");
             appNumber.Text = LanguageManager.GetLocalizedString("appNumber");
-            calculateBtn11.Text = LanguageManager.GetLocalizedString("calculateBtn11");
+            calculateBtn11.Text = LanguageManager.GetLocalizedString("calculateBtn");
             absoluteErrorLabel.Text = LanguageManager.GetLocalizedString("absoluteErrorLabel");
             relativeErrorLabel.Text = LanguageManager.GetLocalizedString("relativeErrorLabel");
             backBtn111.Text = LanguageManager.GetLocalizedString("backBtn111");

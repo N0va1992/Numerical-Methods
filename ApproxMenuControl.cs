@@ -16,6 +16,7 @@ namespace numericalMethods
     {
         public event EventHandler BackButtonClicked;
         public event EventHandler Task11ButtonClicked;
+        public event EventHandler Task12ButtonClicked;
 
         public ApproxMenuControl()
         {
@@ -26,11 +27,17 @@ namespace numericalMethods
             this.SizeChanged += ApproxMenuControl_SizeChanged;
 
             task11Btn.Click += Task11Button_Clicked;
+            task12Btn.Click += Task12Button_Clicked;
         }
 
         private void Task11Button_Clicked(object sender, EventArgs e)
         {
             Task11ButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void Task12Button_Clicked(object sender, EventArgs e)
+        {
+            Task12ButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         private void backBtn11_Click(object sender, EventArgs e)
@@ -51,7 +58,6 @@ namespace numericalMethods
             approxTitle.Width = this.Width;
             task11Btn.Width = this.Width - 10;
             task12Btn.Width = this.Width - 10;
-        }
-
+        }        
     }
 }

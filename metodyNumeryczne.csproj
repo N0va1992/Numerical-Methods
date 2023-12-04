@@ -83,6 +83,12 @@
     <Compile Include="TaskMenu11.Designer.cs">
       <DependentUpon>TaskMenu11.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaskMenu12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskMenu12.Designer.cs">
+      <DependentUpon>TaskMenu12.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ApproxMenuControl.resx">
       <DependentUpon>ApproxMenuControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaskMenu11.resx">
       <DependentUpon>TaskMenu11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskMenu12.resx">
+      <DependentUpon>TaskMenu12.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

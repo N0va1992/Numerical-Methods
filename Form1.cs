@@ -10,6 +10,7 @@ namespace metodyNumeryczne
     {
         private MainMenuControl mainMenuControl;
         private ApproxMenuControl approxMenuControl;
+        private TaskMenu11 taskMenu11;
 
         public Form1()
         {
@@ -22,14 +23,10 @@ namespace metodyNumeryczne
             approxMenuControl.Dock = DockStyle.Fill;
 
             // Podpięcie obsługi zdarzeń z UserControl
-            if (mainMenuControl != null)
-            {
-                mainMenuControl.ApproximationsButtonClicked += MainMenuControl_ApproximationsButtonClicked;
-                mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
-                mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
-            }
 
-            
+            mainMenuControl.ApproximationsButtonClicked += MainMenuControl_ApproximationsButtonClicked;
+            mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
+            mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
 
             Controls.Add(mainMenuControl);
         }
@@ -89,26 +86,27 @@ namespace metodyNumeryczne
         private void ShowApproxMenuContol()
         {
             // Tworzenie nwoej instacji ApproxMenuControl
-            ApproxMenuControl approxMenuControl = new ApproxMenuControl();
+            approxMenuControl = new ApproxMenuControl();
             approxMenuControl.Dock = DockStyle.Fill;
 
             // Usuwanie MainMenuControl z Controls
-            Controls.Remove(mainMenuControl);
+            Controls.Clear();
 
             // Dodawanie ApproxMenuControl do Controls
             Controls.Add(approxMenuControl);
 
             // Przypisanie Event Handlera do przycisku powrotu
             approxMenuControl.BackButtonClicked += ApproxMenuControl_BackButtonClicked;
-            approxMenuControl.Task11ButtonClicked += Task11Control_BackButtonClicked;
+            approxMenuControl.Task11ButtonClicked += ApproxMenuControl_Task11ButtonClicked;
+
         }
 
         private void ShowTask11Control()
         {
-            TaskMenu11 taskMenu11 = new TaskMenu11();
+            taskMenu11 = new TaskMenu11();
             taskMenu11.Dock = DockStyle.Fill;
 
-            Controls.Remove(approxMenuControl);
+            Controls.Clear();
 
             Controls.Add(taskMenu11);
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using numericalMethods.Localization;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,12 +19,48 @@ namespace numericalMethods
         public TaskMenu11()
         {
             InitializeComponent();
-            task11Task.Text = "Napisz i uruchom aplikację komputerową obliczającą błąd względny i bezwzględny po wprowadzeniu\r\ndwu liczb: dokładnej i przybliżonej.";
+            UpdateLocalizedString();
+            absResult.Text = string.Empty;
+            relResult.Text = string.Empty;
         }
 
         private void backBtn111_Click(object sender, EventArgs e)
         {
             BackButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+        private void calculateBtn11_Click(object sender, EventArgs e)
+        {
+            //Pobranie wartości z textboxów dla liczb dokładnej i przybliżonej
+            if (double.TryParse(exactTextBox.Text, out double exactValue) 
+                && double.TryParse(approximateTextBox.Text, out double approxValue))
+            {
+                //Obliczanie błędu względnego i bezwzględnego
+                double absoluteError = Math.Abs(exactValue - approxValue);
+                double relativeError = absoluteError / Math.Abs(exactValue);
+
+                //Wyświetlanie wyniku w labelkach
+                absResult.Text = absoluteError.ToString();
+                relResult.Text = (relativeError * 100).ToString("F2") + "%";  // wyświetlanie błędu względnego w %              
+            }
+            else
+            {
+                absResult.Text = LanguageManager.GetLocalizedString("invalidValues");
+                relResult.Text = LanguageManager.GetLocalizedString("invalidValues");
+
+            }
+        }
+
+        private void UpdateLocalizedString()
+        {
+            task11Task.Text = LanguageManager.GetLocalizedString("task11Task");
+            exNumber.Text = LanguageManager.GetLocalizedString("exNumber");
+            appNumber.Text = LanguageManager.GetLocalizedString("appNumber");
+            calculateBtn11.Text = LanguageManager.GetLocalizedString("calculateBtn11");
+            absoluteErrorLabel.Text = LanguageManager.GetLocalizedString("absoluteErrorLabel");
+            relativeErrorLabel.Text = LanguageManager.GetLocalizedString("relativeErrorLabel");
+            backBtn111.Text = LanguageManager.GetLocalizedString("backBtn111");
+            
+            
         }
     }
 }

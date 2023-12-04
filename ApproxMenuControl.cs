@@ -16,7 +16,6 @@ namespace numericalMethods
     {
         public event EventHandler BackButtonClicked;
         public event EventHandler Task11ButtonClicked;
-        private ApproxMenuControl approxMenuControl;
 
         public ApproxMenuControl()
         {
@@ -25,9 +24,11 @@ namespace numericalMethods
 
             //obsługa zdarzenia SizeChanged
             this.SizeChanged += ApproxMenuControl_SizeChanged;
+
+            task11Btn.Click += Task11Button_Clicked;
         }
 
-        private void task11Btn_Click(object sender, EventArgs e)
+        private void Task11Button_Clicked(object sender, EventArgs e)
         {
             Task11ButtonClicked?.Invoke(this, EventArgs.Empty);
         }

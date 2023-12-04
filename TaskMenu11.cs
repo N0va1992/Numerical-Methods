@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace numericalMethods
 {
-    {
+    
     public partial class TaskMenu11 : UserControl
+    {
+
+        public event EventHandler BackButtonClicked;
         public TaskMenu11()
         {
             InitializeComponent();

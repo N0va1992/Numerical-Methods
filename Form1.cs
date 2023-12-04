@@ -18,11 +18,18 @@ namespace metodyNumeryczne
             mainMenuControl = new MainMenuControl();
             mainMenuControl.Dock = DockStyle.Fill;
 
+            approxMenuControl = new ApproxMenuControl(); // Dodaj tę linię
+            approxMenuControl.Dock = DockStyle.Fill;
+
             // Podpięcie obsługi zdarzeń z UserControl
-            mainMenuControl.ApproximationsButtonClicked += MainMenuControl_ApproximationsButtonClicked;
-            mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
-            mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
-            approxMenuControl.Task11ButtonClicked += ApproxMenuControl_Task11ButtonClicked;
+            if (mainMenuControl != null)
+            {
+                mainMenuControl.ApproximationsButtonClicked += MainMenuControl_ApproximationsButtonClicked;
+                mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
+                mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
+            }
+
+            
 
             Controls.Add(mainMenuControl);
         }
@@ -93,6 +100,7 @@ namespace metodyNumeryczne
 
             // Przypisanie Event Handlera do przycisku powrotu
             approxMenuControl.BackButtonClicked += ApproxMenuControl_BackButtonClicked;
+            approxMenuControl.Task11ButtonClicked += Task11Control_BackButtonClicked;
         }
 
         private void ShowTask11Control()

@@ -25,7 +25,6 @@ namespace numericalMethods
 
             //obsługa zdarzenia SizeChanged
             this.SizeChanged += ApproxMenuControl_SizeChanged;
-            approxMenuControl.Task11ButtonClicked += ApproxMenuControl_Task11ButtonClicked;
         }
 
         private void task11Btn_Click(object sender, EventArgs e)

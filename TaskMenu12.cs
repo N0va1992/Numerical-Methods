@@ -54,6 +54,7 @@ namespace numericalMethods
             calculateBtn12.Text = LanguageManager.GetLocalizedString("calculateBtn");
             underestimationText.Text = LanguageManager.GetLocalizedString("underestimationText");
             overestimationText.Text = LanguageManager.GetLocalizedString("overestimationText");
+            backBtn112.Text = LanguageManager.GetLocalizedString("backBtn");
         }
 
         

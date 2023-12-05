@@ -83,7 +83,7 @@
             // interLabel
             // 
             this.interLabel.AutoSize = true;
-            this.interLabel.Location = new System.Drawing.Point(3, 261);
+            this.interLabel.Location = new System.Drawing.Point(2, 245);
             this.interLabel.Name = "interLabel";
             this.interLabel.Size = new System.Drawing.Size(126, 13);
             this.interLabel.TabIndex = 4;
@@ -127,7 +127,7 @@
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(162, 261);
+            this.resultLabel.Location = new System.Drawing.Point(3, 267);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(34, 13);
             this.resultLabel.TabIndex = 9;

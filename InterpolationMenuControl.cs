@@ -1,7 +1,7 @@
-﻿using System;
+﻿using numericalMethods.Localization;
+using System;
 using System.Linq;
 using System.Windows.Forms;
-using MathNet.Numerics.Interpolation;
 
 namespace numericalMethods
 {
@@ -12,7 +12,8 @@ namespace numericalMethods
         public InterpolationMenuControl()
         {
             InitializeComponent();
-            interTaskText.Text = "Napisz i uruchom aplikację komputerową, która na podstawie wprowadzonych czterech par wielkości (x, f(x)) znajduje wielomian interpolacyjny trzeciego stopnia przybliżający tę funkcję f(x).Jeżeli wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym użytkownika.";
+            resultLabel.Text = string.Empty;
+            UpdateLocalizedStrings();
         }
 
         private void calculateBtn_Click(object sender, EventArgs e)
@@ -28,12 +29,14 @@ namespace numericalMethods
                 if (xValues.Length == fxValues.Length && xValues.Length >= 4)
                 {
                     // Create cubic spline interpolation
-                    var spline = CubicSpline.InterpolateNatural(xValues, fxValues);
+                    var coefficients = CubicSplineInterpolation(xValues, fxValues);
 
-                    // Generate textual representation of the polynomial
-                    string polynomialText = GeneratePolynomialText(spline);
-
-                    resultLabel.Text = polynomialText;
+                    // sprawdzenie czy interopolacja jest możliwa
+                    if (coefficients != null)
+                    {
+                        string polynomialText = GeneratePolynomialText(coefficients, xValues);
+                        resultLabel.Text = polynomialText;
+                    }
                 }
                 else
                 {
@@ -46,27 +49,78 @@ namespace numericalMethods
             }
         }
 
-        private string GeneratePolynomialText(IInterpolation spline)
+        private double[] CubicSplineInterpolation(double[] x, double[] y)
+        {
+            int n = x.Length;
+            double[] h = new double[n - 1];
+            double[] alpha = new double[n - 1];
+            double[] l = new double[n];
+            double[] mu = new double[n - 1];
+            double[] z = new double[n];
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                h[i] = x[i + 1] - x[i];
+                alpha[i] = (3.0 / h[i]) * (y[i + 1] - y[i]) - (3.0 / (i > 0 ? h[i - 1] : h[i])) * (i > 0 ? alpha[i - 1] : 0);
+            }
+
+            l[0] = 1.0;
+            mu[0] = 0.0;
+            z[0] = 0.0;
+
+            for (int i = 1; i < n - 1; i++)
+            {
+                l[i] = 2.0 * (x[i + 1] - x[i - 1]) - h[i - 1] * mu[i - 1];
+                mu[i] = h[i] / l[i];
+                z[i] = (alpha[i] - h[i - 1] * z[i - 1]) / l[i];
+            }
+
+            l[n - 1] = 1.0;
+            z[n - 1] = 0.0;
+            double[] c = new double[n];
+            double[] b = new double[n - 1];
+            double[] d = new double[n - 1];
+
+            for (int j = n - 2; j >= 0; j--)
+            {
+                c[j] = z[j] - mu[j] * c[j + 1];
+                b[j] = (y[j + 1] - y[j]) / h[j] - h[j] * (c[j + 1] + 2.0 * c[j]) / 3.0;
+                d[j] = (c[j + 1] - c[j]) / (3.0 * h[j]);
+            }
+
+            double[] coefficients = new double[4 * (n - 1)];
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                coefficients[4 * i] = y[i];
+                coefficients[4 * i + 1] = b[i];
+                coefficients[4 * i + 2] = c[i];
+                coefficients[4 * i + 3] = d[i];
+            }
+
+            return coefficients;
+        }
+
+        private string GeneratePolynomialText(double[] coefficients, double[] xValues)
         {
             // Build textual representation of the polynomial
             string polynomialText = "P(x) = ";
 
-            for (int i = 0; i < spline.PointCount - 1; i++)
+            for (int i = 0; i < coefficients.Length; i += 4)
             {
                 if (i > 0)
                 {
-                    polynomialText += spline.Coefficients[i][2] > 0 ? " + " : " - ";
+                    polynomialText += coefficients[i + 1] > 0 ? " + " : " - ";
                 }
-                polynomialText += Math.Abs(spline.Coefficients[i][2]);
+                polynomialText += Math.Abs(coefficients[i + 1]).ToString("0.00"); // Formatowanie do 2 miejsc po przecinku
 
-                if (i < spline.PointCount - 2)
+                if (i < coefficients.Length - 4)
                 {
-                    polynomialText += "(x - " + spline.Coefficients[i][1] + ")";
+                    polynomialText += "(x - " + xValues[(i / 4)] + ")";
                 }
             }
             return polynomialText;
         }
-
 
         private double[] ParseInput(string input)
         {
@@ -81,5 +135,16 @@ namespace numericalMethods
         {
             BackButtonClicked?.Invoke(this, EventArgs.Empty);
         }
+
+        public void UpdateLocalizedStrings()
+        {
+            // Kod aktualizacji lokalizowanych ciągów
+            interpolationTitle.Text = LanguageManager.GetLocalizedString("interpolationTitle");
+            interTaskText.Text = LanguageManager.GetLocalizedString("interTaskText");
+            interLabel.Text = LanguageManager.GetLocalizedString("interLabel");
+            calculateBtn.Text = LanguageManager.GetLocalizedString("calculateBtn");
+            backBtn.Text = LanguageManager.GetLocalizedString("backBtn");
+        }
     }
+
 }

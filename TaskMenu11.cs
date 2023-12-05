@@ -58,7 +58,7 @@ namespace numericalMethods
             calculateBtn11.Text = LanguageManager.GetLocalizedString("calculateBtn");
             absoluteErrorLabel.Text = LanguageManager.GetLocalizedString("absoluteErrorLabel");
             relativeErrorLabel.Text = LanguageManager.GetLocalizedString("relativeErrorLabel");
-            backBtn111.Text = LanguageManager.GetLocalizedString("backBtn111");
+            backBtn111.Text = LanguageManager.GetLocalizedString("backBtn");
             
             
         }

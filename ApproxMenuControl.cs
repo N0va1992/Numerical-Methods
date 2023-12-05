@@ -50,7 +50,7 @@ namespace numericalMethods
             approxTitle.Text = LanguageManager.GetLocalizedString("approxTitle");
             task11Btn.Text = LanguageManager.GetLocalizedString("task11Btn");
             task12Btn.Text = LanguageManager.GetLocalizedString("task12Btn");
-            backBtn11.Text = LanguageManager.GetLocalizedString("backBtn11");
+            backBtn11.Text = LanguageManager.GetLocalizedString("backBtn");
         }
 
         private void ApproxMenuControl_SizeChanged(object sender, EventArgs e)

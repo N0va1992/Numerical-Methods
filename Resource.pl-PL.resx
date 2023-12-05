@@ -138,10 +138,7 @@
   <data name="appValue1" xml:space="preserve">
     <value>Wartość przybliżona: </value>
   </data>
-  <data name="backBtn11" xml:space="preserve">
-    <value>Powrót</value>
-  </data>
-  <data name="backBtn111" xml:space="preserve">
+  <data name="backBtn" xml:space="preserve">
     <value>Powrót</value>
   </data>
   <data name="calculateBtn" xml:space="preserve">
@@ -159,8 +156,19 @@
   <data name="integrationsBtn" xml:space="preserve">
     <value>Całkowanie</value>
   </data>
+  <data name="interLabel" xml:space="preserve">
+    <value />
+  </data>
   <data name="interpolationsBtn" xml:space="preserve">
     <value>Interpolacje</value>
+  </data>
+  <data name="interpolationTitle" xml:space="preserve">
+    <value>Interpolacje</value>
+  </data>
+  <data name="interTaskText" xml:space="preserve">
+    <value>Napisz i uruchom aplikację komputerową, która na podstawie wprowadzonych czterech par wielkości
+(x, f(x)) znajduje wielomian interpolacyjny trzeciego stopnia przybliżający tę funkcję f(x).Jeżeli
+wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym użytkownika.</value>
   </data>
   <data name="invalidValues" xml:space="preserve">
     <value>Błędne dane</value>

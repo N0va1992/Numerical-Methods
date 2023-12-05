@@ -138,10 +138,7 @@
   <data name="appValue1" xml:space="preserve">
     <value>Approximate value:</value>
   </data>
-  <data name="backBtn11" xml:space="preserve">
-    <value>Back</value>
-  </data>
-  <data name="backBtn111" xml:space="preserve">
+  <data name="backBtn" xml:space="preserve">
     <value>Back</value>
   </data>
   <data name="calculateBtn" xml:space="preserve">
@@ -160,8 +157,17 @@
   <data name="integrationsBtn" xml:space="preserve">
     <value>Integrations</value>
   </data>
+  <data name="interLabel" xml:space="preserve">
+    <value>Interpolating polynomial:</value>
+  </data>
   <data name="interpolationsBtn" xml:space="preserve">
     <value>Interpolations</value>
+  </data>
+  <data name="interpolationTitle" xml:space="preserve">
+    <value>Interpolations</value>
+  </data>
+  <data name="interTaskText" xml:space="preserve">
+    <value>Write and run a computer application that, based on four pairs of values (x, f(x)), finds the third-degree interpolating polynomial approximating this function f(x). If performing this operation is not possible, the program should inform the user about it.</value>
   </data>
   <data name="invalidValues" xml:space="preserve">
     <value>Invalid values</value>

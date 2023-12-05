@@ -18,6 +18,23 @@ namespace metodyNumeryczne
             UpdateLocalizedStrings();
 
             languageBtn.Click += languageBtn_Click;
+        }        
+
+        private void languageBtn_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Language button clicked");
+            // Obsługa przycisku zmiany języka
+            LanguageButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void approximationsBtn_Click(object sender, EventArgs e)
+        {
+            ApproximationsButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void interpolationsBtn_Click(object sender, EventArgs e)
+        {
+            InterpolationsButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         public void UpdateLocalizedStrings()
@@ -32,16 +49,6 @@ namespace metodyNumeryczne
             title.Text = LanguageManager.GetLocalizedString("formTitle");
         }
 
-        private void languageBtn_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Language button clicked");
-            // Obsługa przycisku zmiany języka
-            LanguageButtonClicked?.Invoke(this, EventArgs.Empty);
-        }
 
-        private void approximationsBtn_Click(object sender, EventArgs e)
-        {
-            ApproximationsButtonClicked?.Invoke(this, EventArgs.Empty);
-        }
     }
 }

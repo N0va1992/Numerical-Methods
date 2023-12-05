@@ -89,11 +89,20 @@
     <Compile Include="TaskMenu12.Designer.cs">
       <DependentUpon>TaskMenu12.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterpolationMenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterpolationMenuControl.Designer.cs">
+      <DependentUpon>InterpolationMenuControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ApproxMenuControl.resx">
       <DependentUpon>ApproxMenuControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterpolationMenuControl.resx">
+      <DependentUpon>InterpolationMenuControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuControl.resx">
       <DependentUpon>MainMenuControl.cs</DependentUpon>

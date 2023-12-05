@@ -39,7 +39,7 @@ namespace numericalMethods
                 double relativeError = absoluteError / Math.Abs(exactValue);
 
                 //Wyświetlanie wyniku w labelkach
-                absResult.Text = absoluteError.ToString();
+                absResult.Text = absoluteError.ToString("F2");
                 relResult.Text = (relativeError * 100).ToString("F2") + "%";  // wyświetlanie błędu względnego w %              
             }
             else

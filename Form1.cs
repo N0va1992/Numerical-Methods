@@ -10,6 +10,7 @@ namespace metodyNumeryczne
     {
         private MainMenuControl mainMenuControl;
         private ApproxMenuControl approxMenuControl;
+        private InterpolationMenuControl interpolationMenuControl;
         private TaskMenu11 taskMenu11;
         private TaskMenu12 taskMenu12;
 
@@ -39,8 +40,7 @@ namespace metodyNumeryczne
 
         private void MainMenuControl_InterpolationsButtonClicked(object sender, EventArgs e)
         {
-            // Obsługa przycisku Interpolations
-            // Tu możesz wywołać kod związany z Interpolations
+            ShowInterMenuControl();
         }
 
         private void MainMenuControl_LanguageButtonClicked(object sender, EventArgs e)
@@ -67,6 +67,11 @@ namespace metodyNumeryczne
             ShowTask12Control();
         }
 
+        private void InterpolationMenuControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowMainMenuControl();
+        }
+
         private void Task11Control_BackButtonClicked(object sender, EventArgs e) 
         {
             ShowApproxMenuContol();
@@ -91,6 +96,7 @@ namespace metodyNumeryczne
 
             //przypisanie Event Handlerów
             mainMenuControl.ApproximationsButtonClicked += MainMenuControl_ApproximationsButtonClicked;
+            mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
             mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
         }
 
@@ -135,6 +141,22 @@ namespace metodyNumeryczne
             Controls.Add(taskMenu12);
 
             taskMenu12.BackButtonClicked += Task12Control_BackButtonClicked;
+        }
+
+        private void ShowInterMenuControl()
+        {
+            // Tworzenie nwoej instacji InterpolationsMenuControl
+            interpolationMenuControl = new InterpolationMenuControl();
+            interpolationMenuControl.Dock = DockStyle.Fill;
+
+            // Usuwanie MainMenuControl z Controls
+            Controls.Clear();
+
+            // Dodawanie ApproxMenuControl do Controls
+            Controls.Add(interpolationMenuControl);
+
+            // Przypisanie Event Handlera do przycisku powrotu
+            interpolationMenuControl.BackButtonClicked += InterpolationMenuControl_BackButtonClicked;
         }
     }
 }

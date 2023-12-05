@@ -36,12 +36,12 @@
             // 
             // approxTitle
             // 
-            this.approxTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.approxTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.approxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.approxTitle.Location = new System.Drawing.Point(0, 0);
-            this.approxTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.approxTitle.Name = "approxTitle";
-            this.approxTitle.Size = new System.Drawing.Size(592, 62);
+            this.approxTitle.Size = new System.Drawing.Size(444, 50);
             this.approxTitle.TabIndex = 0;
             this.approxTitle.Text = "Przybliżenia";
             this.approxTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -49,10 +49,9 @@
             // task11Btn
             // 
             this.task11Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.task11Btn.Location = new System.Drawing.Point(4, 199);
-            this.task11Btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.task11Btn.Location = new System.Drawing.Point(3, 162);
             this.task11Btn.Name = "task11Btn";
-            this.task11Btn.Size = new System.Drawing.Size(581, 28);
+            this.task11Btn.Size = new System.Drawing.Size(436, 23);
             this.task11Btn.TabIndex = 1;
             this.task11Btn.Text = "Zadanie 1";
             this.task11Btn.UseVisualStyleBackColor = true;
@@ -61,10 +60,9 @@
             // task12Btn
             // 
             this.task12Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.task12Btn.Location = new System.Drawing.Point(4, 246);
-            this.task12Btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.task12Btn.Location = new System.Drawing.Point(3, 200);
             this.task12Btn.Name = "task12Btn";
-            this.task12Btn.Size = new System.Drawing.Size(581, 28);
+            this.task12Btn.Size = new System.Drawing.Size(436, 23);
             this.task12Btn.TabIndex = 2;
             this.task12Btn.Text = "Zadanie 2";
             this.task12Btn.UseVisualStyleBackColor = true;
@@ -73,10 +71,9 @@
             // backBtn11
             // 
             this.backBtn11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.backBtn11.Location = new System.Drawing.Point(0, 495);
-            this.backBtn11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backBtn11.Location = new System.Drawing.Point(0, 402);
             this.backBtn11.Name = "backBtn11";
-            this.backBtn11.Size = new System.Drawing.Size(592, 28);
+            this.backBtn11.Size = new System.Drawing.Size(444, 23);
             this.backBtn11.TabIndex = 3;
             this.backBtn11.Text = "Powrót";
             this.backBtn11.UseVisualStyleBackColor = true;
@@ -84,15 +81,14 @@
             // 
             // ApproxMenuControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.backBtn11);
             this.Controls.Add(this.task12Btn);
             this.Controls.Add(this.task11Btn);
             this.Controls.Add(this.approxTitle);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ApproxMenuControl";
-            this.Size = new System.Drawing.Size(592, 523);
+            this.Size = new System.Drawing.Size(444, 425);
             this.ResumeLayout(false);
 
         }

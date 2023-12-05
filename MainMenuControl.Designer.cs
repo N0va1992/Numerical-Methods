@@ -91,6 +91,7 @@
             this.interpolationsBtn.TabIndex = 9;
             this.interpolationsBtn.Text = "Interpolacje";
             this.interpolationsBtn.UseVisualStyleBackColor = true;
+            this.interpolationsBtn.Click += new System.EventHandler(this.interpolationsBtn_Click);
             // 
             // approximationsBtn
             // 

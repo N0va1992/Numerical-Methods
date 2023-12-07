@@ -1,0 +1,37 @@
+﻿using numericalMethods.Localization;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace numericalMethods
+{
+    public partial class ApproxFuncControl : UserControl
+    {
+        public event EventHandler BackButtonClicked;
+
+        public ApproxFuncControl()
+        {
+            InitializeComponent();
+            UpdateLocalizedString();
+        }
+
+        private void backBtn11_Click(object sender, EventArgs e)
+        {
+            BackButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void UpdateLocalizedString()
+        {
+            approxFuncTitle.Text = LanguageManager.GetLocalizedString("approxFuncTitle");
+            task11Btn.Text = LanguageManager.GetLocalizedString("task11Btn");
+            task12Btn.Text = LanguageManager.GetLocalizedString("task12Btn");
+            backBtn11.Text = LanguageManager.GetLocalizedString("backBtn");
+        }
+    }
+}

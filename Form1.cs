@@ -11,6 +11,7 @@ namespace metodyNumeryczne
         private MainMenuControl mainMenuControl;
         private ApproxMenuControl approxMenuControl;
         private InterpolationMenuControl interpolationMenuControl;
+        private ApproxFuncControl approxFuncControl;
         private TaskMenu11 taskMenu11;
         private TaskMenu12 taskMenu12;
 
@@ -28,6 +29,7 @@ namespace metodyNumeryczne
 
             mainMenuControl.ApproximationsButtonClicked += MainMenuControl_ApproximationsButtonClicked;
             mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
+            mainMenuControl.ApproxFuncButtonClicked += MainMenuControl_ApproxFuncButtonClicked;
             mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
 
             Controls.Add(mainMenuControl);
@@ -41,6 +43,11 @@ namespace metodyNumeryczne
         private void MainMenuControl_InterpolationsButtonClicked(object sender, EventArgs e)
         {
             ShowInterMenuControl();
+        }
+
+        private void MainMenuControl_ApproxFuncButtonClicked(object sender, EventArgs e)
+        {
+            ShowApproxFuncMenuControl();
         }
 
         private void MainMenuControl_LanguageButtonClicked(object sender, EventArgs e)
@@ -72,6 +79,11 @@ namespace metodyNumeryczne
             ShowMainMenuControl();
         }
 
+        private void ApproxFuncMenuControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowMainMenuControl();
+        }
+
         private void Task11Control_BackButtonClicked(object sender, EventArgs e) 
         {
             ShowApproxMenuContol();
@@ -97,6 +109,7 @@ namespace metodyNumeryczne
             //przypisanie Event Handlerów
             mainMenuControl.ApproximationsButtonClicked += MainMenuControl_ApproximationsButtonClicked;
             mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
+            mainMenuControl.ApproxFuncButtonClicked += MainMenuControl_ApproxFuncButtonClicked;
             mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
         }
 
@@ -157,6 +170,22 @@ namespace metodyNumeryczne
 
             // Przypisanie Event Handlera do przycisku powrotu
             interpolationMenuControl.BackButtonClicked += InterpolationMenuControl_BackButtonClicked;
+        }
+
+        private void ShowApproxFuncMenuControl()
+        {
+            // Tworzenie nwoej instacji InterpolationsMenuControl
+            approxFuncControl = new ApproxFuncControl();
+            approxFuncControl.Dock = DockStyle.Fill;
+
+            // Usuwanie MainMenuControl z Controls
+            Controls.Clear();
+
+            // Dodawanie ApproxMenuControl do Controls
+            Controls.Add(approxFuncControl);
+
+            // Przypisanie Event Handlera do przycisku powrotu
+            approxFuncControl.BackButtonClicked += ApproxFuncMenuControl_BackButtonClicked;
         }
     }
 }

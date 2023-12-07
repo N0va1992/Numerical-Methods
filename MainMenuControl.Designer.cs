@@ -80,6 +80,7 @@
             this.approxfuncBnt.TabIndex = 10;
             this.approxfuncBnt.Text = "Aproksymacje";
             this.approxfuncBnt.UseVisualStyleBackColor = true;
+            this.approxfuncBnt.Click += new System.EventHandler(this.approxfuncBnt_Click);
             // 
             // interpolationsBtn
             // 

@@ -129,6 +129,9 @@
   <data name="approxfuncBnt" xml:space="preserve">
     <value>Aproksymacje</value>
   </data>
+  <data name="approxFuncTitle" xml:space="preserve">
+    <value>Aproksymacje</value>
+  </data>
   <data name="approximationsBtn" xml:space="preserve">
     <value>Przybliżenia</value>
   </data>

@@ -10,6 +10,7 @@ namespace metodyNumeryczne
     {
         public event EventHandler ApproximationsButtonClicked;
         public event EventHandler InterpolationsButtonClicked;
+        public event EventHandler ApproxFuncButtonClicked;
         public event EventHandler LanguageButtonClicked;
 
         public MainMenuControl()
@@ -37,6 +38,11 @@ namespace metodyNumeryczne
             InterpolationsButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
+        private void approxfuncBnt_Click(object sender, EventArgs e)
+        {
+            ApproxFuncButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
         public void UpdateLocalizedStrings()
         {
             // Kod aktualizacji lokalizowanych ciągów
@@ -49,6 +55,6 @@ namespace metodyNumeryczne
             title.Text = LanguageManager.GetLocalizedString("formTitle");
         }
 
-
+        
     }
 }

@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApproxFuncControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApproxFuncControl.Designer.cs">
+      <DependentUpon>ApproxFuncControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     <Compile Include="InterpolationMenuControl.Designer.cs">
       <DependentUpon>InterpolationMenuControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ApproxFuncControl.resx">
+      <DependentUpon>ApproxFuncControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApproxMenuControl.resx">
       <DependentUpon>ApproxMenuControl.cs</DependentUpon>
     </EmbeddedResource>

@@ -129,6 +129,16 @@
   <data name="approxfuncBnt" xml:space="preserve">
     <value>Approximation Function</value>
   </data>
+  <data name="approxFuncTask1Task" xml:space="preserve">
+    <value>Write and run a computer application that, based on the data from the following table:
+i   xi   yi
+1   2    2.5
+2   4    10
+3   6    32
+4   8    40
+5   10   60
+will find the linear approximating function.</value>
+  </data>
   <data name="approxFuncTitle" xml:space="preserve">
     <value>Aproximation Functions</value>
   </data>
@@ -183,6 +193,9 @@
   </data>
   <data name="relativeErrorLabel" xml:space="preserve">
     <value>Relative error:</value>
+  </data>
+  <data name="resultTextLabel" xml:space="preserve">
+    <value>Result:</value>
   </data>
   <data name="task11Btn" xml:space="preserve">
     <value>Task 1</value>

@@ -118,6 +118,12 @@
     <Compile Include="InterpolationMenuControl.Designer.cs">
       <DependentUpon>InterpolationMenuControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaskMenu31.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskMenu31.Designer.cs">
+      <DependentUpon>TaskMenu31.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ApproxFuncControl.resx">
       <DependentUpon>ApproxFuncControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaskMenu12.resx">
       <DependentUpon>TaskMenu12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskMenu31.resx">
+      <DependentUpon>TaskMenu31.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -64,6 +64,7 @@
             this.task11Btn.TabIndex = 5;
             this.task11Btn.Text = "Zadanie 1";
             this.task11Btn.UseVisualStyleBackColor = true;
+            this.task11Btn.Click += new System.EventHandler(this.task11Btn_Click);
             // 
             // approxFuncTitle
             // 

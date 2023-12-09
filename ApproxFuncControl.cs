@@ -14,6 +14,7 @@ namespace numericalMethods
     public partial class ApproxFuncControl : UserControl
     {
         public event EventHandler Task31ButtonClicked;
+        public event EventHandler Task32ButtonClicked;
         public event EventHandler BackButtonClicked;
 
         public ApproxFuncControl()
@@ -22,11 +23,17 @@ namespace numericalMethods
             UpdateLocalizedString();
 
             task11Btn.Click += Task31ButtonClicked;
+            task12Btn.Click += Task32ButtonClicked;
         }
 
         private void task11Btn_Click(object sender, EventArgs e)
         {
             Task31ButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void task12Btn_Click_1(object sender, EventArgs e)
+        {
+            Task32ButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         private void backBtn11_Click(object sender, EventArgs e)

@@ -54,6 +54,7 @@
             this.task12Btn.TabIndex = 6;
             this.task12Btn.Text = "Zadanie 2";
             this.task12Btn.UseVisualStyleBackColor = true;
+            this.task12Btn.Click += new System.EventHandler(this.task12Btn_Click_1);
             // 
             // task11Btn
             // 

@@ -15,6 +15,7 @@ namespace metodyNumeryczne
         private TaskMenu11 taskMenu11;
         private TaskMenu12 taskMenu12;
         private TaskMenu31 taskMenu31;
+        private TaskMenu32 taskMenu32;
 
         public Form1()
         {
@@ -90,6 +91,11 @@ namespace metodyNumeryczne
             ShowTask31Control();
         }
 
+        private void ApproxFuncMenuControl_Task32ButtonClicked(object sender, EventArgs e)
+        {
+            ShowTask32Control();
+        }
+
         private void Task11Control_BackButtonClicked(object sender, EventArgs e) 
         {
             ShowApproxMenuContol();
@@ -101,6 +107,11 @@ namespace metodyNumeryczne
         }
 
         private void Task31Control_BackButtonClicked(Object sender, EventArgs e)
+        {
+            ShowApproxFuncMenuControl();
+        }
+
+        private void Task32Control_BackButtonClicked(Object sender, EventArgs e)
         {
             ShowApproxFuncMenuControl();
         }
@@ -198,6 +209,7 @@ namespace metodyNumeryczne
             // Przypisanie Event Handlera do przycisku powrotu
             approxFuncControl.BackButtonClicked += ApproxFuncMenuControl_BackButtonClicked;
             approxFuncControl.Task31ButtonClicked += ApproxFuncMenuControl_Task31ButtonClicked;
+            approxFuncControl.Task32ButtonClicked += ApproxFuncMenuControl_Task32ButtonClicked;
         }
 
         private void ShowTask31Control()
@@ -210,6 +222,18 @@ namespace metodyNumeryczne
             Controls.Add(taskMenu31);
 
             taskMenu31.BackButtonClicked += Task31Control_BackButtonClicked;
+        }
+
+        private void ShowTask32Control()
+        {
+            taskMenu32 = new TaskMenu32();
+            taskMenu32.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+
+            Controls.Add(taskMenu32);
+
+            taskMenu32.BackButtonClicked += Task32Control_BackButtonClicked;
         }
     }
 }

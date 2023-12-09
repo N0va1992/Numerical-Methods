@@ -124,6 +124,12 @@
     <Compile Include="TaskMenu31.Designer.cs">
       <DependentUpon>TaskMenu31.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaskMenu32.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskMenu32.Designer.cs">
+      <DependentUpon>TaskMenu32.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ApproxFuncControl.resx">
       <DependentUpon>ApproxFuncControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaskMenu31.resx">
       <DependentUpon>TaskMenu31.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskMenu32.resx">
+      <DependentUpon>TaskMenu32.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -30,16 +30,16 @@
         {
             this.backBtn11 = new System.Windows.Forms.Button();
             this.Task31Task = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox_X1 = new System.Windows.Forms.TextBox();
+            this.textBox_X2 = new System.Windows.Forms.TextBox();
+            this.textBox_X3 = new System.Windows.Forms.TextBox();
+            this.textBox_X4 = new System.Windows.Forms.TextBox();
+            this.textBox_X5 = new System.Windows.Forms.TextBox();
+            this.textBox_Y1 = new System.Windows.Forms.TextBox();
+            this.textBox_Y2 = new System.Windows.Forms.TextBox();
+            this.textBox_Y3 = new System.Windows.Forms.TextBox();
+            this.textBox_Y4 = new System.Windows.Forms.TextBox();
+            this.textBox_Y5 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -76,75 +76,75 @@
             this.Task31Task.Text = "task";
             this.Task31Task.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // textBox_X1
             // 
-            this.textBox1.Location = new System.Drawing.Point(31, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 11;
+            this.textBox_X1.Location = new System.Drawing.Point(31, 102);
+            this.textBox_X1.Name = "textBox_X1";
+            this.textBox_X1.Size = new System.Drawing.Size(100, 20);
+            this.textBox_X1.TabIndex = 11;
             // 
-            // textBox2
+            // textBox_X2
             // 
-            this.textBox2.Location = new System.Drawing.Point(31, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 12;
+            this.textBox_X2.Location = new System.Drawing.Point(31, 128);
+            this.textBox_X2.Name = "textBox_X2";
+            this.textBox_X2.Size = new System.Drawing.Size(100, 20);
+            this.textBox_X2.TabIndex = 12;
             // 
-            // textBox3
+            // textBox_X3
             // 
-            this.textBox3.Location = new System.Drawing.Point(31, 154);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 13;
+            this.textBox_X3.Location = new System.Drawing.Point(31, 154);
+            this.textBox_X3.Name = "textBox_X3";
+            this.textBox_X3.Size = new System.Drawing.Size(100, 20);
+            this.textBox_X3.TabIndex = 13;
             // 
-            // textBox4
+            // textBox_X4
             // 
-            this.textBox4.Location = new System.Drawing.Point(31, 180);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 14;
+            this.textBox_X4.Location = new System.Drawing.Point(31, 180);
+            this.textBox_X4.Name = "textBox_X4";
+            this.textBox_X4.Size = new System.Drawing.Size(100, 20);
+            this.textBox_X4.TabIndex = 14;
             // 
-            // textBox5
+            // textBox_X5
             // 
-            this.textBox5.Location = new System.Drawing.Point(31, 206);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 15;
+            this.textBox_X5.Location = new System.Drawing.Point(31, 206);
+            this.textBox_X5.Name = "textBox_X5";
+            this.textBox_X5.Size = new System.Drawing.Size(100, 20);
+            this.textBox_X5.TabIndex = 15;
             // 
-            // textBox6
+            // textBox_Y1
             // 
-            this.textBox6.Location = new System.Drawing.Point(189, 102);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 16;
+            this.textBox_Y1.Location = new System.Drawing.Point(189, 102);
+            this.textBox_Y1.Name = "textBox_Y1";
+            this.textBox_Y1.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Y1.TabIndex = 16;
             // 
-            // textBox7
+            // textBox_Y2
             // 
-            this.textBox7.Location = new System.Drawing.Point(189, 128);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 17;
+            this.textBox_Y2.Location = new System.Drawing.Point(189, 128);
+            this.textBox_Y2.Name = "textBox_Y2";
+            this.textBox_Y2.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Y2.TabIndex = 17;
             // 
-            // textBox8
+            // textBox_Y3
             // 
-            this.textBox8.Location = new System.Drawing.Point(189, 154);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 18;
+            this.textBox_Y3.Location = new System.Drawing.Point(189, 154);
+            this.textBox_Y3.Name = "textBox_Y3";
+            this.textBox_Y3.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Y3.TabIndex = 18;
             // 
-            // textBox9
+            // textBox_Y4
             // 
-            this.textBox9.Location = new System.Drawing.Point(189, 180);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 19;
+            this.textBox_Y4.Location = new System.Drawing.Point(189, 180);
+            this.textBox_Y4.Name = "textBox_Y4";
+            this.textBox_Y4.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Y4.TabIndex = 19;
             // 
-            // textBox10
+            // textBox_Y5
             // 
-            this.textBox10.Location = new System.Drawing.Point(189, 206);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 20;
+            this.textBox_Y5.Location = new System.Drawing.Point(189, 206);
+            this.textBox_Y5.Name = "textBox_Y5";
+            this.textBox_Y5.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Y5.TabIndex = 20;
             // 
             // label1
             // 
@@ -244,6 +244,7 @@
             this.calculateBtn.TabIndex = 31;
             this.calculateBtn.Text = "Oblicz";
             this.calculateBtn.UseVisualStyleBackColor = true;
+            this.calculateBtn.Click += new System.EventHandler(this.calculateBtn_Click);
             // 
             // label_A
             // 
@@ -280,16 +281,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Y5);
+            this.Controls.Add(this.textBox_Y4);
+            this.Controls.Add(this.textBox_Y3);
+            this.Controls.Add(this.textBox_Y2);
+            this.Controls.Add(this.textBox_Y1);
+            this.Controls.Add(this.textBox_X5);
+            this.Controls.Add(this.textBox_X4);
+            this.Controls.Add(this.textBox_X3);
+            this.Controls.Add(this.textBox_X2);
+            this.Controls.Add(this.textBox_X1);
             this.Controls.Add(this.Task31Task);
             this.Controls.Add(this.backBtn11);
             this.Name = "TaskMenu32";
@@ -303,16 +304,16 @@
 
         private System.Windows.Forms.Button backBtn11;
         private System.Windows.Forms.Label Task31Task;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox_X1;
+        private System.Windows.Forms.TextBox textBox_X2;
+        private System.Windows.Forms.TextBox textBox_X3;
+        private System.Windows.Forms.TextBox textBox_X4;
+        private System.Windows.Forms.TextBox textBox_X5;
+        private System.Windows.Forms.TextBox textBox_Y1;
+        private System.Windows.Forms.TextBox textBox_Y2;
+        private System.Windows.Forms.TextBox textBox_Y3;
+        private System.Windows.Forms.TextBox textBox_Y4;
+        private System.Windows.Forms.TextBox textBox_Y5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

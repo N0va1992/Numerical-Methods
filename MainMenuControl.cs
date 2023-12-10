@@ -11,6 +11,7 @@ namespace metodyNumeryczne
         public event EventHandler ApproximationsButtonClicked;
         public event EventHandler InterpolationsButtonClicked;
         public event EventHandler ApproxFuncButtonClicked;
+        public event EventHandler IntegrationsButtonClicked;
         public event EventHandler LanguageButtonClicked;
 
         public MainMenuControl()
@@ -41,6 +42,11 @@ namespace metodyNumeryczne
         private void approxfuncBnt_Click(object sender, EventArgs e)
         {
             ApproxFuncButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void integrationsBtn_Click(object sender, EventArgs e)
+        {
+            IntegrationsButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         public void UpdateLocalizedStrings()

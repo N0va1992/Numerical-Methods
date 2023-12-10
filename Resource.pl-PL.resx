@@ -169,6 +169,18 @@ znajdzie liniową funkcję aproksymacyjną</value>
   <data name="integrationsBtn" xml:space="preserve">
     <value>Całkowanie</value>
   </data>
+  <data name="integrationsTask" xml:space="preserve">
+    <value>Napisz i uruchom aplikację komputerową obliczająca wartość całki z wielomianu W(x) rzędu co
+najmniej trzeciego i zdefiniowanego na zadanym przedziale [a, b] trzema metodami:
+1. metodą prostokątów,
+2. metodą trapezów,
+3. metodą parabol,
+z zadaną z góry dokładnością. Porównaj i przeanalizuj otrzymane wyniki oraz efektywność tych
+metod (np. liczbę wykonanych iteracji do osiągnięcia pożądanej dokładności).</value>
+  </data>
+  <data name="integrationsTitle" xml:space="preserve">
+    <value>Całkowanie</value>
+  </data>
   <data name="interLabel" xml:space="preserve">
     <value />
   </data>
@@ -192,6 +204,12 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
   <data name="overestimationText" xml:space="preserve">
     <value>Przybliżenie z nadmiarem: </value>
   </data>
+  <data name="parabolicMethodBtn" xml:space="preserve">
+    <value>Metoda parabol</value>
+  </data>
+  <data name="rectangleMethodBtn" xml:space="preserve">
+    <value>Metoda prostokątów</value>
+  </data>
   <data name="relativeErrorLabel" xml:space="preserve">
     <value>Błąd względny:</value>
   </data>
@@ -212,6 +230,15 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
 jej wartość przybliżoną i jej błąd bezwzględny dla dwu przypadków:
 1. liczba jest przybliżeniem z niedomiarem,
 2. liczba jest przybliżeniem z nadmiarem.</value>
+  </data>
+  <data name="Task31Task" xml:space="preserve">
+    <value>Napisz i uruchom aplikację komputerową, która na podstawie poniższych danych:
+(0.955, 5.722), (1.38, 4.812), (1.854, 4.727), (2.093, 4.850), (2.674, 5.011), (3.006, 5.253), (3.255,
+5.617), (3.940, 6.282), (4.060, 6.255)
+używając jako funkcji bazowych następujących funkcji: 1/x , x , x2, znajdzie funkcję aproksymacyjną.</value>
+  </data>
+  <data name="trapezoidalMethodBtn" xml:space="preserve">
+    <value>Metoda trapezów</value>
   </data>
   <data name="underestimationText" xml:space="preserve">
     <value>Przybliżenie z niedomiarem: </value>

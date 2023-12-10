@@ -75,6 +75,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IntegrationsMenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IntegrationsMenuControl.Designer.cs">
+      <DependentUpon>IntegrationsMenuControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Localization\LocalizationManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationsMenuControl.resx">
+      <DependentUpon>IntegrationsMenuControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterpolationMenuControl.resx">
       <DependentUpon>InterpolationMenuControl.cs</DependentUpon>

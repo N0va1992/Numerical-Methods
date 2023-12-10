@@ -12,6 +12,7 @@ namespace metodyNumeryczne
         private ApproxMenuControl approxMenuControl;
         private InterpolationMenuControl interpolationMenuControl;
         private ApproxFuncControl approxFuncControl;
+        private IntegrationsMenuControl integrationsMenuControl;
         private TaskMenu11 taskMenu11;
         private TaskMenu12 taskMenu12;
         private TaskMenu31 taskMenu31;
@@ -32,6 +33,7 @@ namespace metodyNumeryczne
             mainMenuControl.ApproximationsButtonClicked += MainMenuControl_ApproximationsButtonClicked;
             mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
             mainMenuControl.ApproxFuncButtonClicked += MainMenuControl_ApproxFuncButtonClicked;
+            mainMenuControl.IntegrationsButtonClicked += MainMenuControl_IntegrationsButtonClicked;
             mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
 
             Controls.Add(mainMenuControl);
@@ -50,6 +52,11 @@ namespace metodyNumeryczne
         private void MainMenuControl_ApproxFuncButtonClicked(object sender, EventArgs e)
         {
             ShowApproxFuncMenuControl();
+        }
+
+        private void MainMenuControl_IntegrationsButtonClicked(object sender, EventArgs e)
+        {
+            ShowIntegrationsMenuControl();
         }
 
         private void MainMenuControl_LanguageButtonClicked(object sender, EventArgs e)
@@ -82,6 +89,11 @@ namespace metodyNumeryczne
         }
 
         private void ApproxFuncMenuControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowMainMenuControl();
+        }
+
+        private void IntegrationsMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
             ShowMainMenuControl();
         }
@@ -132,6 +144,7 @@ namespace metodyNumeryczne
             mainMenuControl.ApproximationsButtonClicked += MainMenuControl_ApproximationsButtonClicked;
             mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
             mainMenuControl.ApproxFuncButtonClicked += MainMenuControl_ApproxFuncButtonClicked;
+            mainMenuControl.IntegrationsButtonClicked += MainMenuControl_IntegrationsButtonClicked;
             mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
         }
 
@@ -210,6 +223,22 @@ namespace metodyNumeryczne
             approxFuncControl.BackButtonClicked += ApproxFuncMenuControl_BackButtonClicked;
             approxFuncControl.Task31ButtonClicked += ApproxFuncMenuControl_Task31ButtonClicked;
             approxFuncControl.Task32ButtonClicked += ApproxFuncMenuControl_Task32ButtonClicked;
+        }
+
+        private void ShowIntegrationsMenuControl()
+        {
+            // Tworzenie nwoej instacji InterpolationsMenuControl
+            integrationsMenuControl = new IntegrationsMenuControl();
+            integrationsMenuControl.Dock = DockStyle.Fill;
+
+            // Usuwanie MainMenuControl z Controls
+            Controls.Clear();
+
+            // Dodawanie ApproxMenuControl do Controls
+            Controls.Add(integrationsMenuControl);
+
+            // Przypisanie Event Handlera do przycisku powrotu
+            integrationsMenuControl.BackButtonClicked += IntegrationsMenuControl_BackButtonClicked;
         }
 
         private void ShowTask31Control()

@@ -69,6 +69,7 @@
             this.integrationsBtn.TabIndex = 11;
             this.integrationsBtn.Text = "Całkowanie";
             this.integrationsBtn.UseVisualStyleBackColor = true;
+            this.integrationsBtn.Click += new System.EventHandler(this.integrationsBtn_Click);
             // 
             // approxfuncBnt
             // 

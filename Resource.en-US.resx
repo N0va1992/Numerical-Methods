@@ -123,6 +123,9 @@
   <data name="absoluteErrorLabel" xml:space="preserve">
     <value>Absolute error:</value>
   </data>
+  <data name="accuracyLabel" xml:space="preserve">
+    <value>Accuracy:</value>
+  </data>
   <data name="appNumber" xml:space="preserve">
     <value>Approximate number</value>
   </data>
@@ -156,6 +159,9 @@ will find the linear approximating function.</value>
   </data>
   <data name="calculateBtn" xml:space="preserve">
     <value>Calculate</value>
+  </data>
+  <data name="coefficientsLabel" xml:space="preserve">
+    <value>Coefficients:</value>
   </data>
   <data name="differentiationBtn" xml:space="preserve">
     <value>Differentiation</value>
@@ -207,11 +213,17 @@ with a specified level of accuracy. Compare and analyze the obtained results and
   <data name="rectangleMethodBtn" xml:space="preserve">
     <value>Rectangle method</value>
   </data>
+  <data name="rectangleTitle" xml:space="preserve">
+    <value>Rectangle method</value>
+  </data>
   <data name="relativeErrorLabel" xml:space="preserve">
     <value>Relative error:</value>
   </data>
   <data name="resultTextLabel" xml:space="preserve">
     <value>Result:</value>
+  </data>
+  <data name="resultTxt" xml:space="preserve">
+    <value>Integral value:</value>
   </data>
   <data name="task11Btn" xml:space="preserve">
     <value>Task 1</value>

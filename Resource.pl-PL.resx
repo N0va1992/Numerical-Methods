@@ -123,6 +123,9 @@
   <data name="absoluteErrorLabel" xml:space="preserve">
     <value>Błąd bezwzględny:</value>
   </data>
+  <data name="accuracyLabel" xml:space="preserve">
+    <value>Dokładnośc:</value>
+  </data>
   <data name="appNumber" xml:space="preserve">
     <value>Liczba przybliżona:</value>
   </data>
@@ -156,6 +159,9 @@ znajdzie liniową funkcję aproksymacyjną</value>
   </data>
   <data name="calculateBtn" xml:space="preserve">
     <value>Oblicz</value>
+  </data>
+  <data name="coefficientsLabel" xml:space="preserve">
+    <value>Współczynniki:</value>
   </data>
   <data name="differentiationBtn" xml:space="preserve">
     <value>Różniczkowanie</value>
@@ -210,11 +216,17 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
   <data name="rectangleMethodBtn" xml:space="preserve">
     <value>Metoda prostokątów</value>
   </data>
+  <data name="rectangleTitle" xml:space="preserve">
+    <value>Metoda prostokątów</value>
+  </data>
   <data name="relativeErrorLabel" xml:space="preserve">
     <value>Błąd względny:</value>
   </data>
   <data name="resultTextLabel" xml:space="preserve">
     <value>Wynik: </value>
+  </data>
+  <data name="resultTxt" xml:space="preserve">
+    <value>Wartość całki:</value>
   </data>
   <data name="task11Btn" xml:space="preserve">
     <value>Zadanie 1</value>

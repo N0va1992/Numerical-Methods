@@ -17,6 +17,7 @@ namespace metodyNumeryczne
         private TaskMenu12 taskMenu12;
         private TaskMenu31 taskMenu31;
         private TaskMenu32 taskMenu32;
+        private RectangleMethodControl rectMethodControl;
 
         public Form1()
         {
@@ -93,6 +94,11 @@ namespace metodyNumeryczne
             ShowMainMenuControl();
         }
 
+        private void IntegrationsMenuControl_RectangleButtonClicked(object sender, EventArgs e)
+        {
+            ShowRectangleMethodControl();
+        }
+
         private void IntegrationsMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
             ShowMainMenuControl();
@@ -118,14 +124,19 @@ namespace metodyNumeryczne
             ShowApproxMenuContol();
         }
 
-        private void Task31Control_BackButtonClicked(Object sender, EventArgs e)
+        private void Task31Control_BackButtonClicked(object sender, EventArgs e)
         {
             ShowApproxFuncMenuControl();
         }
 
-        private void Task32Control_BackButtonClicked(Object sender, EventArgs e)
+        private void Task32Control_BackButtonClicked(object sender, EventArgs e)
         {
             ShowApproxFuncMenuControl();
+        }
+
+        private void RectangleMethodControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowIntegrationsMenuControl();
         }
 
         private void ShowMainMenuControl()
@@ -238,6 +249,7 @@ namespace metodyNumeryczne
             Controls.Add(integrationsMenuControl);
 
             // Przypisanie Event Handlera do przycisku powrotu
+            integrationsMenuControl.RectangleButtonClicked += IntegrationsMenuControl_RectangleButtonClicked;
             integrationsMenuControl.BackButtonClicked += IntegrationsMenuControl_BackButtonClicked;
         }
 
@@ -263,6 +275,18 @@ namespace metodyNumeryczne
             Controls.Add(taskMenu32);
 
             taskMenu32.BackButtonClicked += Task32Control_BackButtonClicked;
+        }
+
+        private void ShowRectangleMethodControl()
+        {
+            rectMethodControl = new RectangleMethodControl();
+            rectMethodControl.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+
+            Controls.Add(rectMethodControl);
+
+            rectMethodControl.BackButtonClicked += RectangleMethodControl_BackButtonClicked;
         }
     }
 }

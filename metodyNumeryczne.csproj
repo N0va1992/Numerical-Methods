@@ -84,6 +84,12 @@
     <Compile Include="Localization\LocalizationManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RectangleMethodControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RectangleMethodControl.Designer.cs">
+      <DependentUpon>RectangleMethodControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resource.pl-PL.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -164,6 +170,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RectangleMethodControl.resx">
+      <DependentUpon>RectangleMethodControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resource.pl-PL.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.pl-PL.Designer.cs</LastGenOutput>

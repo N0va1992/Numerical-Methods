@@ -56,6 +56,7 @@
             this.trapezoidalMethodBtn.TabIndex = 10;
             this.trapezoidalMethodBtn.Text = "Metoda trapezów";
             this.trapezoidalMethodBtn.UseVisualStyleBackColor = true;
+            this.trapezoidalMethodBtn.Click += new System.EventHandler(this.trapezoidalMethodBtn_Click);
             // 
             // rectangleMethodBtn
             // 

@@ -247,6 +247,9 @@ using the following basic functions: 1/x, x, x^2, will find the approximative fu
   <data name="trapezoidalMethodBtn" xml:space="preserve">
     <value>Trapezoidal method</value>
   </data>
+  <data name="trapezTitle" xml:space="preserve">
+    <value>Trapezodial method</value>
+  </data>
   <data name="underestimationText" xml:space="preserve">
     <value>Understimination: </value>
   </data>

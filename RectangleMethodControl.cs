@@ -61,7 +61,7 @@ namespace numericalMethods
                 double rectangleArea = h * PolynomialValue(x, coefficients);
                 sum += rectangleArea;
             }
-            return sum;
+            return Math.Abs(sum);
         }
 
         private double PolynomialValue(double x, double[] coefficients)

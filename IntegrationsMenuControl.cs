@@ -14,6 +14,7 @@ namespace numericalMethods
     public partial class IntegrationsMenuControl : UserControl
     {
         public event EventHandler RectangleButtonClicked;
+        public event EventHandler TrapezodialButtonClicked;
         public event EventHandler BackButtonClicked;
         public IntegrationsMenuControl()
         {
@@ -21,11 +22,17 @@ namespace numericalMethods
             UpdateLocalizedString();
 
             rectangleMethodBtn.Click += RectangleButton_Clicked;
+            trapezoidalMethodBtn.Click += trapezoidalMethodBtn_Click;
         }
 
         private void RectangleButton_Clicked(object sender, EventArgs e)
         {
             RectangleButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void trapezoidalMethodBtn_Click(object sender, EventArgs e)
+        {
+            TrapezodialButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         private void backBtn11_Click(object sender, EventArgs e)

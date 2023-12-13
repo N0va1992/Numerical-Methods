@@ -18,6 +18,7 @@ namespace metodyNumeryczne
         private TaskMenu31 taskMenu31;
         private TaskMenu32 taskMenu32;
         private RectangleMethodControl rectMethodControl;
+        private TrapezodialMethodControl trapezodialMethodControl;
 
         public Form1()
         {
@@ -69,6 +70,7 @@ namespace metodyNumeryczne
             mainMenuControl.UpdateLocalizedStrings();
         }
 
+        //przyciski menu
         private void ApproxMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
             ShowMainMenuControl();
@@ -99,6 +101,12 @@ namespace metodyNumeryczne
             ShowRectangleMethodControl();
         }
 
+        private void IntegrationsMenuControl_TrapezodialButtonClicked(object sender, EventArgs e)
+        {
+            ShowTrapezodialMethodControl();
+        }
+
+        // przyciski powrotu
         private void IntegrationsMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
             ShowMainMenuControl();
@@ -135,6 +143,11 @@ namespace metodyNumeryczne
         }
 
         private void RectangleMethodControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowIntegrationsMenuControl();
+        }
+
+        private void TrapezodialMethodControl_BackButtonClicked(object sender, EventArgs e)
         {
             ShowIntegrationsMenuControl();
         }
@@ -250,6 +263,7 @@ namespace metodyNumeryczne
 
             // Przypisanie Event Handlera do przycisku powrotu
             integrationsMenuControl.RectangleButtonClicked += IntegrationsMenuControl_RectangleButtonClicked;
+            integrationsMenuControl.TrapezodialButtonClicked += IntegrationsMenuControl_TrapezodialButtonClicked;
             integrationsMenuControl.BackButtonClicked += IntegrationsMenuControl_BackButtonClicked;
         }
 
@@ -287,6 +301,18 @@ namespace metodyNumeryczne
             Controls.Add(rectMethodControl);
 
             rectMethodControl.BackButtonClicked += RectangleMethodControl_BackButtonClicked;
+        }
+
+        private void ShowTrapezodialMethodControl()
+        {
+            trapezodialMethodControl = new TrapezodialMethodControl();
+            trapezodialMethodControl.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+
+            Controls.Add(trapezodialMethodControl);
+
+            trapezodialMethodControl.BackButtonClicked += TrapezodialMethodControl_BackButtonClicked;
         }
     }
 }

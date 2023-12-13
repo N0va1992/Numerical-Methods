@@ -15,6 +15,7 @@ namespace numericalMethods
     {
         public event EventHandler RectangleButtonClicked;
         public event EventHandler TrapezodialButtonClicked;
+        public event EventHandler ParabolicButtonClicked;
         public event EventHandler BackButtonClicked;
         public IntegrationsMenuControl()
         {
@@ -34,6 +35,10 @@ namespace numericalMethods
         {
             TrapezodialButtonClicked?.Invoke(this, EventArgs.Empty);
         }
+        private void parabolicMethodBtn_Click(object sender, EventArgs e)
+        {
+            ParabolicButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
 
         private void backBtn11_Click(object sender, EventArgs e)
         {
@@ -49,5 +54,6 @@ namespace numericalMethods
             parabolicMethodBtn.Text = LanguageManager.GetLocalizedString("parabolicMethodBtn");
             backBtn11.Text = LanguageManager.GetLocalizedString("backBtn");
         }
+
     }
 }

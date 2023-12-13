@@ -204,6 +204,9 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
   <data name="invalidValues" xml:space="preserve">
     <value>Błędne dane</value>
   </data>
+  <data name="iterationsTxt" xml:space="preserve">
+    <value>Liczba iteracji:</value>
+  </data>
   <data name="languageBtn" xml:space="preserve">
     <value>Zmień język</value>
   </data>
@@ -211,6 +214,9 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
     <value>Przybliżenie z nadmiarem: </value>
   </data>
   <data name="parabolicMethodBtn" xml:space="preserve">
+    <value>Metoda parabol</value>
+  </data>
+  <data name="parabolicTitle" xml:space="preserve">
     <value>Metoda parabol</value>
   </data>
   <data name="rectangleMethodBtn" xml:space="preserve">

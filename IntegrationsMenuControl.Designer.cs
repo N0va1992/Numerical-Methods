@@ -88,6 +88,7 @@
             this.parabolicMethodBtn.TabIndex = 12;
             this.parabolicMethodBtn.Text = "Metoda parabol";
             this.parabolicMethodBtn.UseVisualStyleBackColor = true;
+            this.parabolicMethodBtn.Click += new System.EventHandler(this.parabolicMethodBtn_Click);
             // 
             // integrationsTask
             // 

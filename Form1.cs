@@ -19,6 +19,7 @@ namespace metodyNumeryczne
         private TaskMenu32 taskMenu32;
         private RectangleMethodControl rectMethodControl;
         private TrapezodialMethodControl trapezodialMethodControl;
+        private ParabolicMethodControl parabolicMethodControl;
 
         public Form1()
         {
@@ -106,6 +107,11 @@ namespace metodyNumeryczne
             ShowTrapezodialMethodControl();
         }
 
+        private void IntegrationsMenuControl_ParabolicButtonClicked(object sender, EventArgs e)
+        {
+            ShowParabolicMethodControl();
+        }
+
         // przyciski powrotu
         private void IntegrationsMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
@@ -152,6 +158,12 @@ namespace metodyNumeryczne
             ShowIntegrationsMenuControl();
         }
 
+        private void ParabolicMethodControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowIntegrationsMenuControl();
+        }
+
+        // metody generujące kontrolki
         private void ShowMainMenuControl()
         {
             // Tworzenie nowej instancji MainMenuControl
@@ -264,6 +276,7 @@ namespace metodyNumeryczne
             // Przypisanie Event Handlera do przycisku powrotu
             integrationsMenuControl.RectangleButtonClicked += IntegrationsMenuControl_RectangleButtonClicked;
             integrationsMenuControl.TrapezodialButtonClicked += IntegrationsMenuControl_TrapezodialButtonClicked;
+            integrationsMenuControl.ParabolicButtonClicked += IntegrationsMenuControl_ParabolicButtonClicked;
             integrationsMenuControl.BackButtonClicked += IntegrationsMenuControl_BackButtonClicked;
         }
 
@@ -313,6 +326,18 @@ namespace metodyNumeryczne
             Controls.Add(trapezodialMethodControl);
 
             trapezodialMethodControl.BackButtonClicked += TrapezodialMethodControl_BackButtonClicked;
+        }
+
+        private void ShowParabolicMethodControl()
+        {
+            parabolicMethodControl = new ParabolicMethodControl();
+            parabolicMethodControl.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+
+            Controls.Add(parabolicMethodControl);
+
+            parabolicMethodControl.BackButtonClicked += ParabolicMethodControl_BackButtonClicked;
         }
     }
 }

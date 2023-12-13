@@ -82,6 +82,12 @@
       <DependentUpon>IntegrationsMenuControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Localization\LocalizationManager.cs" />
+    <Compile Include="ParabolicMethodControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParabolicMethodControl.Designer.cs">
+      <DependentUpon>ParabolicMethodControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RectangleMethodControl.cs">
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuControl.resx">
       <DependentUpon>MainMenuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParabolicMethodControl.resx">
+      <DependentUpon>ParabolicMethodControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

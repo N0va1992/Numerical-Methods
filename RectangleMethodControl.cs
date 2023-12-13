@@ -19,6 +19,7 @@ namespace numericalMethods
         {
             InitializeComponent();
             resultLabel.Text = string.Empty;
+            iterationsLabel.Text = string.Empty;
             UpdateLocalizedString();
         }
 
@@ -38,10 +39,12 @@ namespace numericalMethods
             double accuracy = double.Parse(accuracyTextBox.Text);
 
             //obliczanie wartości całko metodą prostokątów
-            double result = RectangleMethod(a, b, accuracy, coefficients);
+            int iterations;
+            double result = RectangleMethod(a, b, accuracy, coefficients, out iterations);
 
             //wyświetlanie wyniku
             resultLabel.Text = result.ToString();
+            iterationsLabel.Text = iterations.ToString();
         }
 
         private void backBtn11_Click(object sender, EventArgs e)
@@ -49,20 +52,38 @@ namespace numericalMethods
             BackButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
-        private double RectangleMethod(double a, double b, double accuracy, double[] coefficients)
+        private double RectangleMethod(double a, double b, double accuracy, double[] coefficients, out int iterations)
         {
-            int rectangleQuantity = 1000; //liczba prostokątów
+            int rectangleQuantity = 1000; // liczba prostokątów
             double h = (b - a) / rectangleQuantity;
-            double sum = 0;
+            double sum;
+            double previousApprox = double.MaxValue;
+            iterations = 0;
 
-            for (int i = 0; i < rectangleQuantity; i++)
+            while (true)
             {
-                double x = a + i * h;
-                double rectangleArea = h * PolynomialValue(x, coefficients);
-                sum += rectangleArea;
+                sum = 0;
+
+                for (int i = 0; i < rectangleQuantity; i++)
+                {
+                    double x = a + i * h;
+                    double rectangleArea = h * PolynomialValue(x, coefficients);
+                    sum += rectangleArea;
+                }
+
+                iterations++;
+                // sprawdzenie warunku dokładności
+                if (Math.Abs(previousApprox - sum) < accuracy)
+                    break;
+
+                previousApprox = sum;
+                rectangleQuantity *= 2;
+                h /= 2;
             }
+
             return Math.Abs(sum);
         }
+
 
         private double PolynomialValue(double x, double[] coefficients)
         {
@@ -83,6 +104,7 @@ namespace numericalMethods
             rectangleTitle.Text = LanguageManager.GetLocalizedString("rectangleTitle");
             coefficientsLabel.Text = LanguageManager.GetLocalizedString("coefficientsLabel");
             accuracyLabel.Text = LanguageManager.GetLocalizedString("accuracyLabel");
+            iterationsTxt.Text = LanguageManager.GetLocalizedString("iterationsTxt");
             resultTxt.Text = LanguageManager.GetLocalizedString("resultTxt");
         }
 

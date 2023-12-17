@@ -12,6 +12,7 @@ namespace metodyNumeryczne
         public event EventHandler InterpolationsButtonClicked;
         public event EventHandler ApproxFuncButtonClicked;
         public event EventHandler IntegrationsButtonClicked;
+        public event EventHandler DifferentiationButtonClicked;
         public event EventHandler LanguageButtonClicked;
 
         public MainMenuControl()
@@ -49,6 +50,11 @@ namespace metodyNumeryczne
             IntegrationsButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
+        private void differentiationBtn_Click(object sender, EventArgs e)
+        {
+            DifferentiationButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
         public void UpdateLocalizedStrings()
         {
             // Kod aktualizacji lokalizowanych ciągów
@@ -60,7 +66,5 @@ namespace metodyNumeryczne
             languageBtn.Text = LanguageManager.GetLocalizedString("languageBtn");
             title.Text = LanguageManager.GetLocalizedString("formTitle");
         }
-
-        
     }
 }

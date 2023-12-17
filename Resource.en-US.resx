@@ -157,6 +157,9 @@ will find the linear approximating function.</value>
   <data name="backBtn" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="backwardBtn" xml:space="preserve">
+    <value>Backward differences</value>
+  </data>
   <data name="calculateBtn" xml:space="preserve">
     <value>Calculate</value>
   </data>
@@ -165,6 +168,19 @@ will find the linear approximating function.</value>
   </data>
   <data name="differentiationBtn" xml:space="preserve">
     <value>Differentiation</value>
+  </data>
+  <data name="differentiationTask" xml:space="preserve">
+    <value>Write and run a computer application that takes at least four pairs of points (x, f(x)), then calculates:
+Progressive differences,
+Backward differences,
+Divided differences
+between the corresponding pairs of points. If performing these operations is not possible, the program should inform the user about it.</value>
+  </data>
+  <data name="differentiationTitle" xml:space="preserve">
+    <value>Differentiation</value>
+  </data>
+  <data name="dividedBtn" xml:space="preserve">
+    <value>Divided differences</value>
   </data>
   <data name="exNumber" xml:space="preserve">
     <value>Exact number: </value>
@@ -215,6 +231,9 @@ with a specified level of accuracy. Compare and analyze the obtained results and
   </data>
   <data name="parabolicTitle" xml:space="preserve">
     <value>Parabolic method</value>
+  </data>
+  <data name="progressiveBtn" xml:space="preserve">
+    <value>Progressive differences</value>
   </data>
   <data name="rectangleMethodBtn" xml:space="preserve">
     <value>Rectangle method</value>

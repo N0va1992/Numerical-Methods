@@ -157,6 +157,9 @@ znajdzie liniową funkcję aproksymacyjną</value>
   <data name="backBtn" xml:space="preserve">
     <value>Powrót</value>
   </data>
+  <data name="backwardBtn" xml:space="preserve">
+    <value>Różnice wsteczne</value>
+  </data>
   <data name="calculateBtn" xml:space="preserve">
     <value>Oblicz</value>
   </data>
@@ -165,6 +168,21 @@ znajdzie liniową funkcję aproksymacyjną</value>
   </data>
   <data name="differentiationBtn" xml:space="preserve">
     <value>Różniczkowanie</value>
+  </data>
+  <data name="differentiationTask" xml:space="preserve">
+    <value>Napisz i uruchom aplikację komputerową pobierający co najmniej cztery pary punktów (x, f(x)),
+a następnie obliczającą:
+1. różnice progresywne,
+2. różnice wsteczne,
+3. ilorazy różnicowe
+pomiędzy odpowiednimi parami punktów. Jeżeli wykonanie tej operacji jest niemożliwe program
+powinien poinformować o tym użytkownika.</value>
+  </data>
+  <data name="differentiationTitle" xml:space="preserve">
+    <value>Różniczkowanie</value>
+  </data>
+  <data name="dividedBtn" xml:space="preserve">
+    <value>Ilorazy różnicowe</value>
   </data>
   <data name="exNumber" xml:space="preserve">
     <value>Liczba dokładna:</value>
@@ -218,6 +236,9 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
   </data>
   <data name="parabolicTitle" xml:space="preserve">
     <value>Metoda parabol</value>
+  </data>
+  <data name="progressiveBtn" xml:space="preserve">
+    <value>Różnice progresywne</value>
   </data>
   <data name="rectangleMethodBtn" xml:space="preserve">
     <value>Metoda prostokątów</value>

@@ -58,6 +58,7 @@
             this.differentiationBtn.TabIndex = 12;
             this.differentiationBtn.Text = "Różniczkowanie";
             this.differentiationBtn.UseVisualStyleBackColor = true;
+            this.differentiationBtn.Click += new System.EventHandler(this.differentiationBtn_Click);
             // 
             // integrationsBtn
             // 

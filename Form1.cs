@@ -13,6 +13,7 @@ namespace metodyNumeryczne
         private InterpolationMenuControl interpolationMenuControl;
         private ApproxFuncControl approxFuncControl;
         private IntegrationsMenuControl integrationsMenuControl;
+        private DifferentiationMenuControl differentiationMenuControl;
         private TaskMenu11 taskMenu11;
         private TaskMenu12 taskMenu12;
         private TaskMenu31 taskMenu31;
@@ -37,6 +38,7 @@ namespace metodyNumeryczne
             mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
             mainMenuControl.ApproxFuncButtonClicked += MainMenuControl_ApproxFuncButtonClicked;
             mainMenuControl.IntegrationsButtonClicked += MainMenuControl_IntegrationsButtonClicked;
+            mainMenuControl.DifferentiationButtonClicked += MainMenuCOntrol_DifferentiationButtonClicked;
             mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
 
             Controls.Add(mainMenuControl);
@@ -60,6 +62,11 @@ namespace metodyNumeryczne
         private void MainMenuControl_IntegrationsButtonClicked(object sender, EventArgs e)
         {
             ShowIntegrationsMenuControl();
+        }
+
+        private void MainMenuCOntrol_DifferentiationButtonClicked(object sender, EventArgs e)
+        {
+            ShowDifferentiationMenuControl();
         }
 
         private void MainMenuControl_LanguageButtonClicked(object sender, EventArgs e)
@@ -114,6 +121,11 @@ namespace metodyNumeryczne
 
         // przyciski powrotu
         private void IntegrationsMenuControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowMainMenuControl();
+        }
+
+        public void DifferentiationMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
             ShowMainMenuControl();
         }
@@ -181,6 +193,7 @@ namespace metodyNumeryczne
             mainMenuControl.InterpolationsButtonClicked += MainMenuControl_InterpolationsButtonClicked;
             mainMenuControl.ApproxFuncButtonClicked += MainMenuControl_ApproxFuncButtonClicked;
             mainMenuControl.IntegrationsButtonClicked += MainMenuControl_IntegrationsButtonClicked;
+            mainMenuControl.DifferentiationButtonClicked += MainMenuCOntrol_DifferentiationButtonClicked;
             mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
         }
 
@@ -278,6 +291,22 @@ namespace metodyNumeryczne
             integrationsMenuControl.TrapezodialButtonClicked += IntegrationsMenuControl_TrapezodialButtonClicked;
             integrationsMenuControl.ParabolicButtonClicked += IntegrationsMenuControl_ParabolicButtonClicked;
             integrationsMenuControl.BackButtonClicked += IntegrationsMenuControl_BackButtonClicked;
+        }
+
+        private void ShowDifferentiationMenuControl()
+        {
+            // Tworzenie nwoej instacji InterpolationsMenuControl
+            differentiationMenuControl = new DifferentiationMenuControl();
+            differentiationMenuControl.Dock = DockStyle.Fill;
+
+            // Usuwanie MainMenuControl z Controls
+            Controls.Clear();
+
+            // Dodawanie ApproxMenuControl do Controls
+            Controls.Add(differentiationMenuControl);
+
+            // Przypisanie Event Handlera do przycisku powrotu
+            differentiationMenuControl.BackButtonClicked += DifferentiationMenuControl_BackButtonClicked;
         }
 
         private void ShowTask31Control()

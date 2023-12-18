@@ -126,6 +126,9 @@
   <data name="accuracyLabel" xml:space="preserve">
     <value>Dokładnośc:</value>
   </data>
+  <data name="addMsg" xml:space="preserve">
+    <value>Dodano punkt </value>
+  </data>
   <data name="appNumber" xml:space="preserve">
     <value>Liczba przybliżona:</value>
   </data>
@@ -166,6 +169,12 @@ znajdzie liniową funkcję aproksymacyjną</value>
   <data name="coefficientsLabel" xml:space="preserve">
     <value>Współczynniki:</value>
   </data>
+  <data name="column" xml:space="preserve">
+    <value>Kolumna</value>
+  </data>
+  <data name="different" xml:space="preserve">
+    <value>Różnica</value>
+  </data>
   <data name="differentiationBtn" xml:space="preserve">
     <value>Różniczkowanie</value>
   </data>
@@ -183,6 +192,9 @@ powinien poinformować o tym użytkownika.</value>
   </data>
   <data name="dividedBtn" xml:space="preserve">
     <value>Ilorazy różnicowe</value>
+  </data>
+  <data name="errorMsg" xml:space="preserve">
+    <value>Nieprawidłowe wartości x lub y. Sprawdź wprowadzone dane.</value>
   </data>
   <data name="exNumber" xml:space="preserve">
     <value>Liczba dokładna:</value>
@@ -227,6 +239,9 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
   </data>
   <data name="languageBtn" xml:space="preserve">
     <value>Zmień język</value>
+  </data>
+  <data name="notEnoughtMsg" xml:space="preserve">
+    <value>Potrzebujesz co najmniej dwóch punktów do obliczeń różnic progresywnych.</value>
   </data>
   <data name="overestimationText" xml:space="preserve">
     <value>Przybliżenie z nadmiarem: </value>

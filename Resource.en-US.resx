@@ -126,6 +126,9 @@
   <data name="accuracyLabel" xml:space="preserve">
     <value>Accuracy:</value>
   </data>
+  <data name="addMsg" xml:space="preserve">
+    <value>Point added </value>
+  </data>
   <data name="appNumber" xml:space="preserve">
     <value>Approximate number</value>
   </data>
@@ -166,6 +169,12 @@ will find the linear approximating function.</value>
   <data name="coefficientsLabel" xml:space="preserve">
     <value>Coefficients:</value>
   </data>
+  <data name="column" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="different" xml:space="preserve">
+    <value>Different</value>
+  </data>
   <data name="differentiationBtn" xml:space="preserve">
     <value>Differentiation</value>
   </data>
@@ -181,6 +190,9 @@ between the corresponding pairs of points. If performing these operations is not
   </data>
   <data name="dividedBtn" xml:space="preserve">
     <value>Divided differences</value>
+  </data>
+  <data name="errorMsg" xml:space="preserve">
+    <value>Invalid x or y values. Check the entered data.</value>
   </data>
   <data name="exNumber" xml:space="preserve">
     <value>Exact number: </value>
@@ -222,6 +234,9 @@ with a specified level of accuracy. Compare and analyze the obtained results and
   </data>
   <data name="languageBtn" xml:space="preserve">
     <value>Change language</value>
+  </data>
+  <data name="notEnoughtMsg" xml:space="preserve">
+    <value>You need at least two points for progressive differences calculations.</value>
   </data>
   <data name="overestimationText" xml:space="preserve">
     <value>Overstimination:</value>

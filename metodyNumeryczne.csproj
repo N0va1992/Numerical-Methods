@@ -95,6 +95,12 @@
       <DependentUpon>ParabolicMethodControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgressiveMenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgressiveMenuControl.Designer.cs">
+      <DependentUpon>ProgressiveMenuControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RectangleMethodControl.cs">
       <SubType>UserControl</SubType>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ParabolicMethodControl.resx">
       <DependentUpon>ParabolicMethodControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressiveMenuControl.resx">
+      <DependentUpon>ProgressiveMenuControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

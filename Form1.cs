@@ -21,6 +21,7 @@ namespace metodyNumeryczne
         private RectangleMethodControl rectMethodControl;
         private TrapezodialMethodControl trapezodialMethodControl;
         private ParabolicMethodControl parabolicMethodControl;
+        private ProgressiveMenuControl progressiveMenuControl;
 
         public Form1()
         {
@@ -28,9 +29,6 @@ namespace metodyNumeryczne
 
             mainMenuControl = new MainMenuControl();
             mainMenuControl.Dock = DockStyle.Fill;
-
-            approxMenuControl = new ApproxMenuControl(); // Dodaj tę linię
-            approxMenuControl.Dock = DockStyle.Fill;
 
             // Podpięcie obsługi zdarzeń z UserControl
 
@@ -44,6 +42,7 @@ namespace metodyNumeryczne
             Controls.Add(mainMenuControl);
         }
 
+        //obsluga przycisków w menu
         private void MainMenuControl_ApproximationsButtonClicked(object sender, EventArgs e)
         {
             ShowApproxMenuContol();
@@ -72,18 +71,11 @@ namespace metodyNumeryczne
         private void MainMenuControl_LanguageButtonClicked(object sender, EventArgs e)
         {
             // Obsługa przycisku Language
-            // Tutaj dodaj kod do ponownego załadowania całego interfejsu użytkownika
-            // z nowymi tekstami w nowym języku.
             LanguageManager.ToggleLanguage();
             mainMenuControl.UpdateLocalizedStrings();
         }
 
-        //przyciski menu
-        private void ApproxMenuControl_BackButtonClicked(object sender, EventArgs e)
-        {
-            ShowMainMenuControl();
-        }
-
+        //obsługa przycisków w zadaniach
         private void ApproxMenuControl_Task11ButtonClicked(object sender, EventArgs e) 
         {
             ShowTask11Control();
@@ -119,7 +111,17 @@ namespace metodyNumeryczne
             ShowParabolicMethodControl();
         }
 
+        private void DifferentiationMenuControl_ProgressiveButtonClicked(object sender, EventArgs e)
+        {
+            ShowProgressiveMenuControl();
+        }
+
         // przyciski powrotu
+        private void ApproxMenuControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowMainMenuControl();
+        }
+
         private void IntegrationsMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
             ShowMainMenuControl();
@@ -175,6 +177,11 @@ namespace metodyNumeryczne
             ShowIntegrationsMenuControl();
         }
 
+        private void ProgressiveMenuControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowDifferentiationMenuControl();
+        }
+
         // metody generujące kontrolki
         private void ShowMainMenuControl()
         {
@@ -199,30 +206,75 @@ namespace metodyNumeryczne
 
         private void ShowApproxMenuContol()
         {
-            // Tworzenie nwoej instacji ApproxMenuControl
             approxMenuControl = new ApproxMenuControl();
             approxMenuControl.Dock = DockStyle.Fill;
 
-            // Usuwanie MainMenuControl z Controls
             Controls.Clear();
-
-            // Dodawanie ApproxMenuControl do Controls
             Controls.Add(approxMenuControl);
 
-            // Przypisanie Event Handlera do przycisku powrotu
             approxMenuControl.BackButtonClicked += ApproxMenuControl_BackButtonClicked;
             approxMenuControl.Task11ButtonClicked += ApproxMenuControl_Task11ButtonClicked;
             approxMenuControl.Task12ButtonClicked += ApproxMenuControl_Task12ButtonClicked;
 
         }
+        
+        private void ShowInterMenuControl()
+        {
+            interpolationMenuControl = new InterpolationMenuControl();
+            interpolationMenuControl.Dock = DockStyle.Fill;
 
+            Controls.Clear();
+            Controls.Add(interpolationMenuControl);
+
+            interpolationMenuControl.BackButtonClicked += InterpolationMenuControl_BackButtonClicked;
+        }
+
+        private void ShowApproxFuncMenuControl()
+        {
+            approxFuncControl = new ApproxFuncControl();
+            approxFuncControl.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+            Controls.Add(approxFuncControl);
+
+            approxFuncControl.BackButtonClicked += ApproxFuncMenuControl_BackButtonClicked;
+            approxFuncControl.Task31ButtonClicked += ApproxFuncMenuControl_Task31ButtonClicked;
+            approxFuncControl.Task32ButtonClicked += ApproxFuncMenuControl_Task32ButtonClicked;
+        }
+
+        private void ShowIntegrationsMenuControl()
+        {
+            integrationsMenuControl = new IntegrationsMenuControl();
+            integrationsMenuControl.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+            Controls.Add(integrationsMenuControl);
+
+            integrationsMenuControl.RectangleButtonClicked += IntegrationsMenuControl_RectangleButtonClicked;
+            integrationsMenuControl.TrapezodialButtonClicked += IntegrationsMenuControl_TrapezodialButtonClicked;
+            integrationsMenuControl.ParabolicButtonClicked += IntegrationsMenuControl_ParabolicButtonClicked;
+            integrationsMenuControl.BackButtonClicked += IntegrationsMenuControl_BackButtonClicked;
+        }
+
+        private void ShowDifferentiationMenuControl()
+        {
+            differentiationMenuControl = new DifferentiationMenuControl();
+            differentiationMenuControl.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+            Controls.Add(differentiationMenuControl);
+
+            differentiationMenuControl.ProgressiveButtonClicked += DifferentiationMenuControl_ProgressiveButtonClicked;
+            differentiationMenuControl.BackButtonClicked += DifferentiationMenuControl_BackButtonClicked;
+        }
+
+        //metody do wyświetlania kontrolek zadań
         private void ShowTask11Control()
         {
             taskMenu11 = new TaskMenu11();
             taskMenu11.Dock = DockStyle.Fill;
 
             Controls.Clear();
-
             Controls.Add(taskMenu11);
 
             taskMenu11.BackButtonClicked += Task11Control_BackButtonClicked;
@@ -234,79 +286,9 @@ namespace metodyNumeryczne
             taskMenu12.Dock = DockStyle.Fill;
 
             Controls.Clear();
-
             Controls.Add(taskMenu12);
 
             taskMenu12.BackButtonClicked += Task12Control_BackButtonClicked;
-        }
-
-        private void ShowInterMenuControl()
-        {
-            // Tworzenie nwoej instacji InterpolationsMenuControl
-            interpolationMenuControl = new InterpolationMenuControl();
-            interpolationMenuControl.Dock = DockStyle.Fill;
-
-            // Usuwanie MainMenuControl z Controls
-            Controls.Clear();
-
-            // Dodawanie ApproxMenuControl do Controls
-            Controls.Add(interpolationMenuControl);
-
-            // Przypisanie Event Handlera do przycisku powrotu
-            interpolationMenuControl.BackButtonClicked += InterpolationMenuControl_BackButtonClicked;
-        }
-
-        private void ShowApproxFuncMenuControl()
-        {
-            // Tworzenie nwoej instacji InterpolationsMenuControl
-            approxFuncControl = new ApproxFuncControl();
-            approxFuncControl.Dock = DockStyle.Fill;
-
-            // Usuwanie MainMenuControl z Controls
-            Controls.Clear();
-
-            // Dodawanie ApproxMenuControl do Controls
-            Controls.Add(approxFuncControl);
-
-            // Przypisanie Event Handlera do przycisku powrotu
-            approxFuncControl.BackButtonClicked += ApproxFuncMenuControl_BackButtonClicked;
-            approxFuncControl.Task31ButtonClicked += ApproxFuncMenuControl_Task31ButtonClicked;
-            approxFuncControl.Task32ButtonClicked += ApproxFuncMenuControl_Task32ButtonClicked;
-        }
-
-        private void ShowIntegrationsMenuControl()
-        {
-            // Tworzenie nwoej instacji InterpolationsMenuControl
-            integrationsMenuControl = new IntegrationsMenuControl();
-            integrationsMenuControl.Dock = DockStyle.Fill;
-
-            // Usuwanie MainMenuControl z Controls
-            Controls.Clear();
-
-            // Dodawanie ApproxMenuControl do Controls
-            Controls.Add(integrationsMenuControl);
-
-            // Przypisanie Event Handlera do przycisku powrotu
-            integrationsMenuControl.RectangleButtonClicked += IntegrationsMenuControl_RectangleButtonClicked;
-            integrationsMenuControl.TrapezodialButtonClicked += IntegrationsMenuControl_TrapezodialButtonClicked;
-            integrationsMenuControl.ParabolicButtonClicked += IntegrationsMenuControl_ParabolicButtonClicked;
-            integrationsMenuControl.BackButtonClicked += IntegrationsMenuControl_BackButtonClicked;
-        }
-
-        private void ShowDifferentiationMenuControl()
-        {
-            // Tworzenie nwoej instacji InterpolationsMenuControl
-            differentiationMenuControl = new DifferentiationMenuControl();
-            differentiationMenuControl.Dock = DockStyle.Fill;
-
-            // Usuwanie MainMenuControl z Controls
-            Controls.Clear();
-
-            // Dodawanie ApproxMenuControl do Controls
-            Controls.Add(differentiationMenuControl);
-
-            // Przypisanie Event Handlera do przycisku powrotu
-            differentiationMenuControl.BackButtonClicked += DifferentiationMenuControl_BackButtonClicked;
         }
 
         private void ShowTask31Control()
@@ -315,7 +297,6 @@ namespace metodyNumeryczne
             taskMenu31.Dock = DockStyle.Fill;
 
             Controls.Clear();
-
             Controls.Add(taskMenu31);
 
             taskMenu31.BackButtonClicked += Task31Control_BackButtonClicked;
@@ -327,7 +308,6 @@ namespace metodyNumeryczne
             taskMenu32.Dock = DockStyle.Fill;
 
             Controls.Clear();
-
             Controls.Add(taskMenu32);
 
             taskMenu32.BackButtonClicked += Task32Control_BackButtonClicked;
@@ -339,7 +319,6 @@ namespace metodyNumeryczne
             rectMethodControl.Dock = DockStyle.Fill;
 
             Controls.Clear();
-
             Controls.Add(rectMethodControl);
 
             rectMethodControl.BackButtonClicked += RectangleMethodControl_BackButtonClicked;
@@ -351,7 +330,6 @@ namespace metodyNumeryczne
             trapezodialMethodControl.Dock = DockStyle.Fill;
 
             Controls.Clear();
-
             Controls.Add(trapezodialMethodControl);
 
             trapezodialMethodControl.BackButtonClicked += TrapezodialMethodControl_BackButtonClicked;
@@ -363,10 +341,20 @@ namespace metodyNumeryczne
             parabolicMethodControl.Dock = DockStyle.Fill;
 
             Controls.Clear();
-
             Controls.Add(parabolicMethodControl);
 
             parabolicMethodControl.BackButtonClicked += ParabolicMethodControl_BackButtonClicked;
+        }
+
+        private void ShowProgressiveMenuControl()
+        {
+            progressiveMenuControl = new ProgressiveMenuControl();
+            progressiveMenuControl.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+            Controls.Add(progressiveMenuControl);
+
+            progressiveMenuControl.BackButtonClicked += ProgressiveMenuControl_BackButtonClicked;
         }
     }
 }

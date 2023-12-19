@@ -69,6 +69,12 @@
     <Compile Include="ApproxFuncControl.Designer.cs">
       <DependentUpon>ApproxFuncControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="BackwardMenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackwardMenuControl.Designer.cs">
+      <DependentUpon>BackwardMenuControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DifferentiationMenuControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApproxMenuControl.resx">
       <DependentUpon>ApproxMenuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackwardMenuControl.resx">
+      <DependentUpon>BackwardMenuControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DifferentiationMenuControl.resx">
       <DependentUpon>DifferentiationMenuControl.cs</DependentUpon>

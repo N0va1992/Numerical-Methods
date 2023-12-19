@@ -14,6 +14,7 @@ namespace numericalMethods
     public partial class DifferentiationMenuControl : UserControl
     {
         public event EventHandler ProgressiveButtonClicked;
+        public event EventHandler BackwardButtonClicked;
         public event EventHandler BackButtonClicked;
         public DifferentiationMenuControl()
         {
@@ -24,6 +25,10 @@ namespace numericalMethods
         private void progressiveBtn_Click(object sender, EventArgs e)
         {
             ProgressiveButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+        private void backwardBtn_Click(object sender, EventArgs e)
+        {
+            BackwardButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         private void backBtn11_Click(object sender, EventArgs e)
@@ -40,6 +45,5 @@ namespace numericalMethods
             dividedBtn.Text = LanguageManager.GetLocalizedString("dividedBtn");
             backBtn11.Text = LanguageManager.GetLocalizedString("backBtn");
         }
-
     }
 }

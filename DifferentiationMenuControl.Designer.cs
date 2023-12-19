@@ -77,6 +77,7 @@
             this.backwardBtn.TabIndex = 16;
             this.backwardBtn.Text = "Różnice wsteczne";
             this.backwardBtn.UseVisualStyleBackColor = true;
+            this.backwardBtn.Click += new System.EventHandler(this.backwardBtn_Click);
             // 
             // progressiveBtn
             // 
@@ -110,7 +111,7 @@
             this.Controls.Add(this.backwardBtn);
             this.Controls.Add(this.progressiveBtn);
             this.Controls.Add(this.differentiationTitle);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DifferentiationMenuControl";
             this.Size = new System.Drawing.Size(334, 345);
             this.ResumeLayout(false);

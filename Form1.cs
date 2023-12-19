@@ -22,6 +22,7 @@ namespace metodyNumeryczne
         private TrapezodialMethodControl trapezodialMethodControl;
         private ParabolicMethodControl parabolicMethodControl;
         private ProgressiveMenuControl progressiveMenuControl;
+        private BackwardMenuControl backwardMenuControl;
 
         public Form1()
         {
@@ -116,6 +117,11 @@ namespace metodyNumeryczne
             ShowProgressiveMenuControl();
         }
 
+        private void DifferentiationMenuControl_BackwardButtonClicked(object sender, EventArgs e)
+        {
+            ShowBackwardMenuControl();
+        }
+
         // przyciski powrotu
         private void ApproxMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
@@ -178,6 +184,11 @@ namespace metodyNumeryczne
         }
 
         private void ProgressiveMenuControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowDifferentiationMenuControl();
+        }
+
+        private void BackwardMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
             ShowDifferentiationMenuControl();
         }
@@ -265,6 +276,7 @@ namespace metodyNumeryczne
             Controls.Add(differentiationMenuControl);
 
             differentiationMenuControl.ProgressiveButtonClicked += DifferentiationMenuControl_ProgressiveButtonClicked;
+            differentiationMenuControl.BackwardButtonClicked += DifferentiationMenuControl_BackwardButtonClicked;
             differentiationMenuControl.BackButtonClicked += DifferentiationMenuControl_BackButtonClicked;
         }
 
@@ -355,6 +367,17 @@ namespace metodyNumeryczne
             Controls.Add(progressiveMenuControl);
 
             progressiveMenuControl.BackButtonClicked += ProgressiveMenuControl_BackButtonClicked;
+        }
+
+        private void ShowBackwardMenuControl()
+        {
+            backwardMenuControl = new BackwardMenuControl();
+            backwardMenuControl.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+            Controls.Add(backwardMenuControl);
+
+            backwardMenuControl.BackButtonClicked += BackwardMenuControl_BackButtonClicked;
         }
     }
 }

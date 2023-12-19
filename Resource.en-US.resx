@@ -126,6 +126,9 @@
   <data name="accuracyLabel" xml:space="preserve">
     <value>Accuracy:</value>
   </data>
+  <data name="addBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
   <data name="addMsg" xml:space="preserve">
     <value>Point added </value>
   </data>
@@ -248,6 +251,9 @@ with a specified level of accuracy. Compare and analyze the obtained results and
     <value>Parabolic method</value>
   </data>
   <data name="progressiveBtn" xml:space="preserve">
+    <value>Progressive differences</value>
+  </data>
+  <data name="progressiveTitle" xml:space="preserve">
     <value>Progressive differences</value>
   </data>
   <data name="rectangleMethodBtn" xml:space="preserve">

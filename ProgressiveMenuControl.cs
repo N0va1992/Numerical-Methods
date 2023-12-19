@@ -21,6 +21,7 @@ namespace numericalMethods
         public ProgressiveMenuControl()
         {
             InitializeComponent();
+            UpdateLocalizedString();
 
             xValues = new List<double>();
             yValues = new List<double>();
@@ -94,9 +95,9 @@ namespace numericalMethods
             {
                 List<string> row = new List<string>();
 
-                for (int j = 0; j < progressiveDiff.Count;)
+                for (int j = 0; j < progressiveDiff.Count; j++)
                 {
-                    //sprawdzenie czy lista ma wystarczająca pojemność
+                    // Sprawdzenie, czy lista ma wystarczającą pojemność
                     if (i < progressiveDiff[j].Count)
                     {
                         row.Add(progressiveDiff[j][i].ToString());
@@ -105,8 +106,8 @@ namespace numericalMethods
                     {
                         row.Add("");
                     }
-                    
                 }
+
                 dataGridView1.Rows.Add(row.ToArray());
             }
         }
@@ -114,6 +115,14 @@ namespace numericalMethods
         private void backBtn11_Click(object sender, EventArgs e)
         {
             BackButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void UpdateLocalizedString()
+        {
+            progressiveTitle.Text = LanguageManager.GetLocalizedString("progressiveTitle");
+            addBtn.Text = LanguageManager.GetLocalizedString("addBtn");
+            calculateBtn.Text = LanguageManager.GetLocalizedString("calculateBtn");
+            backBtn11.Text = LanguageManager.GetLocalizedString("backBtn");
         }
        
     }

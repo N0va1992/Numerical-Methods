@@ -126,6 +126,9 @@
   <data name="accuracyLabel" xml:space="preserve">
     <value>Dokładnośc:</value>
   </data>
+  <data name="addBtn" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
   <data name="addMsg" xml:space="preserve">
     <value>Dodano punkt </value>
   </data>
@@ -253,6 +256,9 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
     <value>Metoda parabol</value>
   </data>
   <data name="progressiveBtn" xml:space="preserve">
+    <value>Różnice progresywne</value>
+  </data>
+  <data name="progressiveTitle" xml:space="preserve">
     <value>Różnice progresywne</value>
   </data>
   <data name="rectangleMethodBtn" xml:space="preserve">

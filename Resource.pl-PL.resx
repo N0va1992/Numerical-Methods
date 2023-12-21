@@ -166,6 +166,9 @@ znajdzie liniową funkcję aproksymacyjną</value>
   <data name="backwardBtn" xml:space="preserve">
     <value>Różnice wsteczne</value>
   </data>
+  <data name="backwardTitle" xml:space="preserve">
+    <value>Różnice wsteczne</value>
+  </data>
   <data name="calculateBtn" xml:space="preserve">
     <value>Oblicz</value>
   </data>
@@ -195,6 +198,9 @@ powinien poinformować o tym użytkownika.</value>
   </data>
   <data name="dividedBtn" xml:space="preserve">
     <value>Ilorazy różnicowe</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Błąd</value>
   </data>
   <data name="errorMsg" xml:space="preserve">
     <value>Nieprawidłowe wartości x lub y. Sprawdź wprowadzone dane.</value>
@@ -246,6 +252,9 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
   <data name="notEnoughtMsg" xml:space="preserve">
     <value>Potrzebujesz co najmniej dwóch punktów do obliczeń różnic progresywnych.</value>
   </data>
+  <data name="notEnoughtMsg2" xml:space="preserve">
+    <value>Potrzebujesz co najmniej 4 punktów.</value>
+  </data>
   <data name="overestimationText" xml:space="preserve">
     <value>Przybliżenie z nadmiarem: </value>
   </data>
@@ -255,11 +264,17 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
   <data name="parabolicTitle" xml:space="preserve">
     <value>Metoda parabol</value>
   </data>
+  <data name="pointsLabel" xml:space="preserve">
+    <value>Punkt:</value>
+  </data>
   <data name="progressiveBtn" xml:space="preserve">
     <value>Różnice progresywne</value>
   </data>
   <data name="progressiveTitle" xml:space="preserve">
     <value>Różnice progresywne</value>
+  </data>
+  <data name="quotientsMsg" xml:space="preserve">
+    <value>Ilorazy różnicowe</value>
   </data>
   <data name="rectangleMethodBtn" xml:space="preserve">
     <value>Metoda prostokątów</value>
@@ -269,6 +284,9 @@ wykonanie tej operacji jest niemożliwe, to program powinien poinformować o tym
   </data>
   <data name="relativeErrorLabel" xml:space="preserve">
     <value>Błąd względny:</value>
+  </data>
+  <data name="resultLabel" xml:space="preserve">
+    <value>Wynik:</value>
   </data>
   <data name="resultTextLabel" xml:space="preserve">
     <value>Wynik: </value>
@@ -305,5 +323,8 @@ używając jako funkcji bazowych następujących funkcji: 1/x , x , x2, znajdzie
   </data>
   <data name="underestimationText" xml:space="preserve">
     <value>Przybliżenie z niedomiarem: </value>
+  </data>
+  <data name="wrongXYMsg" xml:space="preserve">
+    <value>Wprowadź poprawne wartości x i y.</value>
   </data>
 </root>

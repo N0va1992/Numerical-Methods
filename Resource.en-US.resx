@@ -166,6 +166,9 @@ will find the linear approximating function.</value>
   <data name="backwardBtn" xml:space="preserve">
     <value>Backward differences</value>
   </data>
+  <data name="backwardTitle" xml:space="preserve">
+    <value>Backward differences</value>
+  </data>
   <data name="calculateBtn" xml:space="preserve">
     <value>Calculate</value>
   </data>
@@ -193,6 +196,9 @@ between the corresponding pairs of points. If performing these operations is not
   </data>
   <data name="dividedBtn" xml:space="preserve">
     <value>Divided differences</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
   </data>
   <data name="errorMsg" xml:space="preserve">
     <value>Invalid x or y values. Check the entered data.</value>
@@ -241,6 +247,9 @@ with a specified level of accuracy. Compare and analyze the obtained results and
   <data name="notEnoughtMsg" xml:space="preserve">
     <value>You need at least two points for progressive differences calculations.</value>
   </data>
+  <data name="notEnoughtMsg2" xml:space="preserve">
+    <value>You need at least 4 points.</value>
+  </data>
   <data name="overestimationText" xml:space="preserve">
     <value>Overstimination:</value>
   </data>
@@ -250,11 +259,17 @@ with a specified level of accuracy. Compare and analyze the obtained results and
   <data name="parabolicTitle" xml:space="preserve">
     <value>Parabolic method</value>
   </data>
+  <data name="pointsLabel" xml:space="preserve">
+    <value>Point:</value>
+  </data>
   <data name="progressiveBtn" xml:space="preserve">
     <value>Progressive differences</value>
   </data>
   <data name="progressiveTitle" xml:space="preserve">
     <value>Progressive differences</value>
+  </data>
+  <data name="quotientsMsg" xml:space="preserve">
+    <value>Difference quotients</value>
   </data>
   <data name="rectangleMethodBtn" xml:space="preserve">
     <value>Rectangle method</value>
@@ -264,6 +279,9 @@ with a specified level of accuracy. Compare and analyze the obtained results and
   </data>
   <data name="relativeErrorLabel" xml:space="preserve">
     <value>Relative error:</value>
+  </data>
+  <data name="resultLabel" xml:space="preserve">
+    <value>Result:</value>
   </data>
   <data name="resultTextLabel" xml:space="preserve">
     <value>Result:</value>
@@ -298,5 +316,8 @@ using the following basic functions: 1/x, x, x^2, will find the approximative fu
   </data>
   <data name="underestimationText" xml:space="preserve">
     <value>Understimination: </value>
+  </data>
+  <data name="wrongXYMsg" xml:space="preserve">
+    <value>Enter correct values for x and y</value>
   </data>
 </root>

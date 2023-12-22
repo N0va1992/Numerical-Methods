@@ -13,6 +13,7 @@ namespace metodyNumeryczne
         public event EventHandler ApproxFuncButtonClicked;
         public event EventHandler IntegrationsButtonClicked;
         public event EventHandler DifferentiationButtonClicked;
+        public event EventHandler CreditsButtonClicked;
         public event EventHandler LanguageButtonClicked;
 
         public MainMenuControl()
@@ -55,6 +56,11 @@ namespace metodyNumeryczne
             DifferentiationButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
+        private void creditsBtn_Click(object sender, EventArgs e)
+        {
+            CreditsButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
         public void UpdateLocalizedStrings()
         {
             // Kod aktualizacji lokalizowanych ciągów
@@ -63,8 +69,10 @@ namespace metodyNumeryczne
             approxfuncBnt.Text = LanguageManager.GetLocalizedString("approxfuncBnt");
             integrationsBtn.Text = LanguageManager.GetLocalizedString("integrationsBtn");
             differentiationBtn.Text = LanguageManager.GetLocalizedString("differentiationBtn");
+            creditsBtn.Text = LanguageManager.GetLocalizedString("creditsBtn");
             languageBtn.Text = LanguageManager.GetLocalizedString("languageBtn");
             title.Text = LanguageManager.GetLocalizedString("formTitle");
         }
+
     }
 }

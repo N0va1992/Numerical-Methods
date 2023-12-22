@@ -35,6 +35,7 @@
             this.interpolationsBtn = new System.Windows.Forms.Button();
             this.approximationsBtn = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
+            this.creditsBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // languageBtn
@@ -51,7 +52,7 @@
             // differentiationBtn
             // 
             this.differentiationBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.differentiationBtn.Location = new System.Drawing.Point(14, 267);
+            this.differentiationBtn.Location = new System.Drawing.Point(13, 226);
             this.differentiationBtn.Margin = new System.Windows.Forms.Padding(4);
             this.differentiationBtn.Name = "differentiationBtn";
             this.differentiationBtn.Size = new System.Drawing.Size(367, 28);
@@ -63,7 +64,7 @@
             // integrationsBtn
             // 
             this.integrationsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.integrationsBtn.Location = new System.Drawing.Point(15, 231);
+            this.integrationsBtn.Location = new System.Drawing.Point(14, 190);
             this.integrationsBtn.Margin = new System.Windows.Forms.Padding(4);
             this.integrationsBtn.Name = "integrationsBtn";
             this.integrationsBtn.Size = new System.Drawing.Size(365, 28);
@@ -75,7 +76,7 @@
             // approxfuncBnt
             // 
             this.approxfuncBnt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.approxfuncBnt.Location = new System.Drawing.Point(15, 194);
+            this.approxfuncBnt.Location = new System.Drawing.Point(14, 153);
             this.approxfuncBnt.Margin = new System.Windows.Forms.Padding(4);
             this.approxfuncBnt.Name = "approxfuncBnt";
             this.approxfuncBnt.Size = new System.Drawing.Size(365, 28);
@@ -87,7 +88,7 @@
             // interpolationsBtn
             // 
             this.interpolationsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.interpolationsBtn.Location = new System.Drawing.Point(15, 157);
+            this.interpolationsBtn.Location = new System.Drawing.Point(14, 116);
             this.interpolationsBtn.Margin = new System.Windows.Forms.Padding(4);
             this.interpolationsBtn.Name = "interpolationsBtn";
             this.interpolationsBtn.Size = new System.Drawing.Size(365, 28);
@@ -99,7 +100,7 @@
             // approximationsBtn
             // 
             this.approximationsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.approximationsBtn.Location = new System.Drawing.Point(15, 120);
+            this.approximationsBtn.Location = new System.Drawing.Point(14, 79);
             this.approximationsBtn.Margin = new System.Windows.Forms.Padding(4);
             this.approximationsBtn.Name = "approximationsBtn";
             this.approximationsBtn.Size = new System.Drawing.Size(365, 28);
@@ -120,8 +121,21 @@
             this.title.Text = "tytuł";
             this.title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // creditsBtn
+            // 
+            this.creditsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.creditsBtn.Location = new System.Drawing.Point(117, 276);
+            this.creditsBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.creditsBtn.Name = "creditsBtn";
+            this.creditsBtn.Size = new System.Drawing.Size(159, 28);
+            this.creditsBtn.TabIndex = 14;
+            this.creditsBtn.Text = "Twórca";
+            this.creditsBtn.UseVisualStyleBackColor = true;
+            this.creditsBtn.Click += new System.EventHandler(this.creditsBtn_Click);
+            // 
             // MainMenuControl
             // 
+            this.Controls.Add(this.creditsBtn);
             this.Controls.Add(this.languageBtn);
             this.Controls.Add(this.differentiationBtn);
             this.Controls.Add(this.integrationsBtn);
@@ -144,5 +158,6 @@
         private System.Windows.Forms.Button interpolationsBtn;
         private System.Windows.Forms.Button approximationsBtn;
         private System.Windows.Forms.Label title;
+        private System.Windows.Forms.Button creditsBtn;
     }
 }

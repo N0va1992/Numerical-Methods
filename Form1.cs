@@ -24,6 +24,7 @@ namespace metodyNumeryczne
         private ProgressiveMenuControl progressiveMenuControl;
         private BackwardMenuControl backwardMenuControl;
         private DividedMenuControl dividedMenuControl;
+        private CreditsControl creditsControl;
 
         public Form1()
         {
@@ -39,6 +40,7 @@ namespace metodyNumeryczne
             mainMenuControl.ApproxFuncButtonClicked += MainMenuControl_ApproxFuncButtonClicked;
             mainMenuControl.IntegrationsButtonClicked += MainMenuControl_IntegrationsButtonClicked;
             mainMenuControl.DifferentiationButtonClicked += MainMenuCOntrol_DifferentiationButtonClicked;
+            mainMenuControl.CreditsButtonClicked += MainMenuControl_CreditsButtonClicked;
             mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
 
             Controls.Add(mainMenuControl);
@@ -70,6 +72,11 @@ namespace metodyNumeryczne
             ShowDifferentiationMenuControl();
         }
 
+        private void MainMenuControl_CreditsButtonClicked(object sender, EventArgs e)
+        {
+            ShowCreditsControl();
+        }
+
         private void MainMenuControl_LanguageButtonClicked(object sender, EventArgs e)
         {
             // Obsługa przycisku Language
@@ -86,11 +93,6 @@ namespace metodyNumeryczne
         private void ApproxMenuControl_Task12ButtonClicked(object sender, EventArgs e)
         {
             ShowTask12Control();
-        }
-
-        private void InterpolationMenuControl_BackButtonClicked(object sender, EventArgs e)
-        {
-            ShowMainMenuControl();
         }
 
         private void ApproxFuncMenuControl_BackButtonClicked(object sender, EventArgs e)
@@ -130,6 +132,11 @@ namespace metodyNumeryczne
 
         // przyciski powrotu
         private void ApproxMenuControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowMainMenuControl();
+        }
+
+        private void InterpolationMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
             ShowMainMenuControl();
         }
@@ -204,6 +211,11 @@ namespace metodyNumeryczne
             ShowDifferentiationMenuControl();
         }
 
+        private void CreditsControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowMainMenuControl();
+        }
+
         // metody generujące kontrolki
         private void ShowMainMenuControl()
         {
@@ -223,6 +235,7 @@ namespace metodyNumeryczne
             mainMenuControl.ApproxFuncButtonClicked += MainMenuControl_ApproxFuncButtonClicked;
             mainMenuControl.IntegrationsButtonClicked += MainMenuControl_IntegrationsButtonClicked;
             mainMenuControl.DifferentiationButtonClicked += MainMenuCOntrol_DifferentiationButtonClicked;
+            mainMenuControl.CreditsButtonClicked += MainMenuControl_CreditsButtonClicked;
             mainMenuControl.LanguageButtonClicked += MainMenuControl_LanguageButtonClicked;
         }
 
@@ -401,6 +414,17 @@ namespace metodyNumeryczne
             Controls.Add(dividedMenuControl);
 
             dividedMenuControl.BackButtonClicked += DividedMenuControl_BackButtonClicked;
+        }
+
+        private void ShowCreditsControl()
+        {
+            creditsControl = new CreditsControl();
+            creditsControl.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+            Controls.Add(creditsControl);
+
+            creditsControl.BackButtonClicked += CreditsControl_BackButtonClicked;
         }
     }
 }

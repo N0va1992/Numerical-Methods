@@ -178,6 +178,16 @@ will find the linear approximating function.</value>
   <data name="column" xml:space="preserve">
     <value>Column</value>
   </data>
+  <data name="creditsBtn" xml:space="preserve">
+    <value>Credits</value>
+  </data>
+  <data name="creditsLabel" xml:space="preserve">
+    <value>University of Lomza
+
+Patryk Bekier
+Computer Science non-stationary
+Semester 3</value>
+  </data>
   <data name="different" xml:space="preserve">
     <value>Different</value>
   </data>

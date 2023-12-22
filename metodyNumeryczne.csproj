@@ -75,6 +75,12 @@
     <Compile Include="BackwardMenuControl.Designer.cs">
       <DependentUpon>BackwardMenuControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreditsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreditsControl.Designer.cs">
+      <DependentUpon>CreditsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DifferentiationMenuControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BackwardMenuControl.resx">
       <DependentUpon>BackwardMenuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreditsControl.resx">
+      <DependentUpon>CreditsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DifferentiationMenuControl.resx">
       <DependentUpon>DifferentiationMenuControl.cs</DependentUpon>

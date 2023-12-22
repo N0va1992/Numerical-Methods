@@ -178,6 +178,16 @@ znajdzie liniową funkcję aproksymacyjną</value>
   <data name="column" xml:space="preserve">
     <value>Kolumna</value>
   </data>
+  <data name="creditsBtn" xml:space="preserve">
+    <value>Twórca</value>
+  </data>
+  <data name="creditsLabel" xml:space="preserve">
+    <value>Akademia Łomżyńska
+
+Patryk Bekier
+Informatyka nst
+Semestr 3</value>
+  </data>
   <data name="different" xml:space="preserve">
     <value>Różnica</value>
   </data>

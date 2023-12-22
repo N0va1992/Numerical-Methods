@@ -23,6 +23,7 @@ namespace metodyNumeryczne
         private ParabolicMethodControl parabolicMethodControl;
         private ProgressiveMenuControl progressiveMenuControl;
         private BackwardMenuControl backwardMenuControl;
+        private DividedMenuControl dividedMenuControl;
 
         public Form1()
         {
@@ -117,6 +118,11 @@ namespace metodyNumeryczne
             ShowProgressiveMenuControl();
         }
 
+        private void DifferentiationMenuControl_DividedButtonClicked(object sender, EventArgs e)
+        {
+            ShowDividedMenuControl();
+        }
+
         private void DifferentiationMenuControl_BackwardButtonClicked(object sender, EventArgs e)
         {
             ShowBackwardMenuControl();
@@ -189,6 +195,11 @@ namespace metodyNumeryczne
         }
 
         private void BackwardMenuControl_BackButtonClicked(object sender, EventArgs e)
+        {
+            ShowDifferentiationMenuControl();
+        }
+
+        private void DividedMenuControl_BackButtonClicked(object sender, EventArgs e)
         {
             ShowDifferentiationMenuControl();
         }
@@ -376,6 +387,17 @@ namespace metodyNumeryczne
 
             Controls.Clear();
             Controls.Add(backwardMenuControl);
+
+            backwardMenuControl.BackButtonClicked += BackwardMenuControl_BackButtonClicked;
+        }
+
+        private void ShowDividedMenuControl()
+        {
+            dividedMenuControl = new DividedMenuControl();
+            dividedMenuControl.Dock = DockStyle.Fill;
+
+            Controls.Clear();
+            Controls.Add(dividedMenuControl);
 
             backwardMenuControl.BackButtonClicked += BackwardMenuControl_BackButtonClicked;
         }

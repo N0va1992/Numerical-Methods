@@ -199,6 +199,12 @@ powinien poinformować o tym użytkownika.</value>
   <data name="dividedBtn" xml:space="preserve">
     <value>Ilorazy różnicowe</value>
   </data>
+  <data name="dividedMsg" xml:space="preserve">
+    <value>Iloraz </value>
+  </data>
+  <data name="dividedTitle" xml:space="preserve">
+    <value>Ilorazy różnicowe</value>
+  </data>
   <data name="error" xml:space="preserve">
     <value>Błąd</value>
   </data>

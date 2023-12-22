@@ -197,6 +197,12 @@ between the corresponding pairs of points. If performing these operations is not
   <data name="dividedBtn" xml:space="preserve">
     <value>Divided differences</value>
   </data>
+  <data name="dividedMsg" xml:space="preserve">
+    <value>Quotient </value>
+  </data>
+  <data name="dividedTitle" xml:space="preserve">
+    <value>Divided differences</value>
+  </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
   </data>

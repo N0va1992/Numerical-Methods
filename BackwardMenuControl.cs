@@ -112,6 +112,7 @@ namespace numericalMethods
             calculateBtn.Text = LanguageManager.GetLocalizedString("calculateBtn");
             pointsLabel.Text = LanguageManager.GetLocalizedString("pointsLabel");
             resultLabel.Text = LanguageManager.GetLocalizedString("resultLabel");
+            backBtn11.Text = LanguageManager.GetLocalizedString("backBtn");
         }
         
     }

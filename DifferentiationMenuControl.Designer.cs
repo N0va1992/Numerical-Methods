@@ -40,9 +40,10 @@
             // 
             this.differentiationTask.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.differentiationTask.Location = new System.Drawing.Point(3, 35);
+            this.differentiationTask.Location = new System.Drawing.Point(4, 43);
+            this.differentiationTask.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.differentiationTask.Name = "differentiationTask";
-            this.differentiationTask.Size = new System.Drawing.Size(328, 132);
+            this.differentiationTask.Size = new System.Drawing.Size(437, 162);
             this.differentiationTask.TabIndex = 19;
             this.differentiationTask.Text = "task";
             this.differentiationTask.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -50,19 +51,22 @@
             // dividedBtn
             // 
             this.dividedBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dividedBtn.Location = new System.Drawing.Point(4, 244);
+            this.dividedBtn.Location = new System.Drawing.Point(5, 300);
+            this.dividedBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dividedBtn.Name = "dividedBtn";
-            this.dividedBtn.Size = new System.Drawing.Size(326, 23);
+            this.dividedBtn.Size = new System.Drawing.Size(435, 28);
             this.dividedBtn.TabIndex = 18;
             this.dividedBtn.Text = "Ilorazy różnicowe";
             this.dividedBtn.UseVisualStyleBackColor = true;
+            this.dividedBtn.Click += new System.EventHandler(this.dividedBtn_Click);
             // 
             // backBtn11
             // 
             this.backBtn11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.backBtn11.Location = new System.Drawing.Point(0, 322);
+            this.backBtn11.Location = new System.Drawing.Point(0, 397);
+            this.backBtn11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.backBtn11.Name = "backBtn11";
-            this.backBtn11.Size = new System.Drawing.Size(334, 23);
+            this.backBtn11.Size = new System.Drawing.Size(445, 28);
             this.backBtn11.TabIndex = 17;
             this.backBtn11.Text = "Powrót";
             this.backBtn11.UseVisualStyleBackColor = true;
@@ -71,9 +75,10 @@
             // backwardBtn
             // 
             this.backwardBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.backwardBtn.Location = new System.Drawing.Point(4, 214);
+            this.backwardBtn.Location = new System.Drawing.Point(5, 263);
+            this.backwardBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.backwardBtn.Name = "backwardBtn";
-            this.backwardBtn.Size = new System.Drawing.Size(326, 23);
+            this.backwardBtn.Size = new System.Drawing.Size(435, 28);
             this.backwardBtn.TabIndex = 16;
             this.backwardBtn.Text = "Różnice wsteczne";
             this.backwardBtn.UseVisualStyleBackColor = true;
@@ -82,9 +87,10 @@
             // progressiveBtn
             // 
             this.progressiveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressiveBtn.Location = new System.Drawing.Point(4, 185);
+            this.progressiveBtn.Location = new System.Drawing.Point(5, 228);
+            this.progressiveBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progressiveBtn.Name = "progressiveBtn";
-            this.progressiveBtn.Size = new System.Drawing.Size(326, 23);
+            this.progressiveBtn.Size = new System.Drawing.Size(435, 28);
             this.progressiveBtn.TabIndex = 15;
             this.progressiveBtn.Text = "Różnice progresywne";
             this.progressiveBtn.UseVisualStyleBackColor = true;
@@ -95,15 +101,16 @@
             this.differentiationTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.differentiationTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.differentiationTitle.Location = new System.Drawing.Point(0, 0);
+            this.differentiationTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.differentiationTitle.Name = "differentiationTitle";
-            this.differentiationTitle.Size = new System.Drawing.Size(334, 35);
+            this.differentiationTitle.Size = new System.Drawing.Size(445, 43);
             this.differentiationTitle.TabIndex = 14;
             this.differentiationTitle.Text = "Różniczkowanie";
             this.differentiationTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // DifferentiationMenuControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.differentiationTask);
             this.Controls.Add(this.dividedBtn);
@@ -111,9 +118,9 @@
             this.Controls.Add(this.backwardBtn);
             this.Controls.Add(this.progressiveBtn);
             this.Controls.Add(this.differentiationTitle);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DifferentiationMenuControl";
-            this.Size = new System.Drawing.Size(334, 345);
+            this.Size = new System.Drawing.Size(445, 425);
             this.ResumeLayout(false);
 
         }

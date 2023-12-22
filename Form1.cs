@@ -288,6 +288,7 @@ namespace metodyNumeryczne
 
             differentiationMenuControl.ProgressiveButtonClicked += DifferentiationMenuControl_ProgressiveButtonClicked;
             differentiationMenuControl.BackwardButtonClicked += DifferentiationMenuControl_BackwardButtonClicked;
+            differentiationMenuControl.DividedButtonClicked += DifferentiationMenuControl_DividedButtonClicked;
             differentiationMenuControl.BackButtonClicked += DifferentiationMenuControl_BackButtonClicked;
         }
 
@@ -399,7 +400,7 @@ namespace metodyNumeryczne
             Controls.Clear();
             Controls.Add(dividedMenuControl);
 
-            backwardMenuControl.BackButtonClicked += BackwardMenuControl_BackButtonClicked;
+            dividedMenuControl.BackButtonClicked += DividedMenuControl_BackButtonClicked;
         }
     }
 }
